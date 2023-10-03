@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Blog</title>
+    <style>
+        body{
+            background-color: #101217;           
+            
+        }
+        /*Navbar*/
+        .navbar{
+            max-width: 1441px;
+            align-items: center;
+            
+            display:flex;
+
+            align-content: stretch;
+            
+            
+        }
+        .logo1{
+           position: absolute; 
+            width: 109px;
+            height: 92px;
+            left: 56px;
+            top: 11px;
+
+            background: url(/images/LOGO.png);
+
+        }
+        .hamburger{
+            position: absolute;            
+            left: 1420px;
+            top: 49px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));   
+            
+
+        }
+
+        /*section*/
+        .projects-section{
+            max-width: 1450px;
+            align-items: center;
+        }
+        .projects h1{
+            font-family: 'Satoshi';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 148px;
+            line-height: 173px;
+            /* identical to box height */
+            color: #232833;
+            margin-left: 117px;
+            z-index: 1;
+
+        }
+        .container{
+            margin-top: -165px;
+            display: flex;
+            flex-direction: column;
+            margin-left: 111px;
+            justify-content: space-between;
+            width: 1197px;
+            z-index: 2;
+           
+        }
+        h2{
+            margin-top: 274px;
+            margin-left: 23px;
+            margin-bottom: -28px;
+            font-family: 'Argesta';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 48px;
+            /* identical to box height */
+            /* pink */
+            color: #FFE4CC;   
+            
+
+        }
+        h3{
+            margin-left:23px;
+            font-family: 'Satoshi';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 32px;
+            /* pink */
+            color: #FFE4CC;
+            margin-right: 153px;
+            
+
+        }
+        .divA{
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            justify-items: center;
+            margin-bottom: 59px;
+        }
+        .div1{
+
+            text-decoration: none;               
+
+        }
+        
+        .div2{
+            background:url(images/blog-2.png);
+            width: 531px;
+            height: 531px;
+            text-decoration: none;   
+        }
+
+    </style>
+</head>
+<body>
+    <!--navbar-->
+    <nav class="navbar">
+        <a href="/">
+            <img 
+            src="/images/LOGO.png"
+            width="109px"
+            height="92px">
+        </a>
+        <a href="/" class="hamburger">
+            <img 
+            src="/images/Hamburger.png"
+            width="52px"
+            height="18px">
+        </a>
+    </nav>
+
+    <section class="projects-section">
+        <div class="projects">
+            <!--Projects heading-->
+            <h1>LINKEDIN POST</h1>
+
+            <!--cards-->
+            <div class="container">
+                <!--first group-->
+                <div class="divA">
+                    <a href="#" class="div1"> 
+                        <!--
+                            <img>
+                        
+                        <div></div>
+                        
+                        <div>
+                            <h3>Being a</h3>
+                            <h2>Generalist Designer</h2>
+                        </div>
+                        
+                        <div>
+                            <p>Here are some points to consider regarding the role of a designer as a generalist
+                                </p>
+                            <img>
+                        </div>
+
+                        -->
+                        <img
+                        src="images/1.png"
+                        width="531px"
+                        height="531px"
+                        >          
+                        
+
+                                              
+                    </a>
+                    <a href="#" class="div2">
+                        
+                    </a>
+
+                </div> 
+            </div> 
+        </div>
+    </section> 
+
+<!--FIXED ICONS RIGHT-->
+<a href="#"><img src="./images/LINKEDIN.png" alt=""
+    style="position: fixed; height: 40px; width: 40px; top: 300px; right: 10px; z-index: 2;"></a>
+<a href="#"><img src="./images/BEAHNCE.png" alt=""
+    style="position: fixed; height: 40px; width: 40px; top: 381px; right: 10px; z-index: 2;"></a>
+<a href="#"><img src="./images/INSTA.png" alt=""
+    style="position: fixed; height: 40px; width: 40px; top: 462px; right: 10px; z-index: 2;"></a>
+
+<!-- FOOTER -->
+<p
+style="position: absolute; top: 894px; left: 537px; width: 400px; font-size: 20px; font-family: Arial, Helvetica, sans-serif; color: white; z-index: -4;">
+Atharva Duraphe 2023 All Rights Reserved
+</p>
+
+</body>
+</html>

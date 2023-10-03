@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Portfolio</title>
+
+    <style>
+        body{
+            background-color: #101217;
+            
+            
+        }
+        .navbar{
+            max-width: 1441px;
+            align-items: center;
+            
+            display:flex;
+
+            align-content: stretch;
+            
+            
+        }
+        .logo1{
+           position: absolute; 
+            width: 109px;
+            height: 92px;
+            left: 56px;
+            top: 11px;
+
+            background: url(/images/LOGO.png);
+
+        }
+        .hamburger{
+            position: absolute;            
+            left: 1420px;
+            top: 49px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+            
+            
+
+        }
+        section{
+            max-width: 1080px;
+        }
+        .back-sign{
+            position: absolute;
+            width: 548px;
+            height: 548px;
+            left: 135px;
+            top: 107px;
+            background: url(images/BACK\ SIGN.png);    
+            z-index: 1;   
+        }
+        .profile-name-phtot{
+            display: flex;
+            flex-direction: column;
+        }
+        .section1{
+            display: flex;
+            flex-direction: row;
+        }
+        .overlay{
+            position: absolute;
+            z-index: 2;     
+            margin-top: 345px;   
+        }
+        .name{    
+            position: absolute;
+            left: 114px;
+            width: 494px;
+            height: 64px;  
+            margin-top: -27px;      
+            font-family: 'Times New Roman', Times, serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 64px;
+            line-height: 64px;
+            color: #F5933E;
+
+        }
+        .user-exp{
+            position: absolute;
+            width: 352px;
+            height: 43px;           
+            left: 114px;
+            top:14px;
+            font-family:Arial, Helvetica, sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 30px;
+            line-height: 43px;
+            color: #F5933E;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        }
+        .photo{
+            background: url(images/Group\ 276.png);
+            position: absolute;
+            width: 459.5px;
+            height: 724.54px;
+            left: 657.5px;
+            top:-19px;           
+        
+        }
+
+        .description{
+            display: flex;
+            flex-direction: column;
+        }
+        .rectangle{            
+            position: absolute;
+            width: 427px;
+            height: 400px;
+            left: 162px;
+            top: 905px;
+            background: #FFFFFF;
+        }
+        .rectangle img{
+            align-items:center;
+        }
+        .desc{
+            display: flex;
+            flex-direction: row;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .desc p{
+            position: absolute;
+            width: 621px;
+            height: 324px;
+            left: 697px;
+            top: 1021px;
+
+            font-family: 'Satoshi';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 27px;
+            text-align: justify;
+
+            /* pink */
+            color: #FFE4CC;
+
+        }
+        .namaste{
+            
+            /* Namaste...! */
+            position:absolute;
+            top:865px;
+            left:695px;           
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 86px;
+            /* orange */
+            color: #F5933E;
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: example 4s linear 0s infinite alternate;
+            }
+
+            @keyframes example {
+            from {
+                width: 0;
+            }
+            to {
+                width: 7em;
+            }
+            }
+        .projects{
+            display: flex;
+            flex-direction: row;
+        }
+        .project-heading{
+            position: absolute;
+            width: 963px;
+            height: 246px;
+            left: 80px;
+            top: 1473px;
+
+            font-family: 'Satoshi';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 200px;
+            line-height: 246px;
+            /* identical to box height */
+
+            color: #232833;
+
+        }
+        .projects a :hover{
+            width: 1350px;
+            height: 250px;
+            box-shadow: 0 12px 16px 0 rgba(244, 242, 242, 0.256), 0 17px 50px 0 rgba(242, 239, 239, 0.24);
+            z-index: 1;
+        }
+        .lokar{
+            position: absolute;
+            width: 1338px;
+            height: 200px;
+            left: 57px;
+            top: 1790px;
+
+            
+
+        }
+        .ex-tour{
+            position: absolute;
+            width: 1338px;
+            height: 200px;
+            left: 57px;
+            top: 2017px;
+        }
+
+        .choco-carve{
+            position: absolute;
+            width: 1338px;
+            height: 200px;
+            left: 57px;
+            top: 2244px;
+
+        }
+        button{
+            position: absolute;
+            left: 1195px;
+            top: 2475.78px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            color: #D9D9D9;
+            width: 199.98px;
+            height: 35.98px;
+            cursor: pointer;
+        }
+        .more-projects-button button :hover{
+            color: #b4b0b0;
+                        
+        }
+        .more-projects-button h3{
+            padding-left: 17px;
+            color: #101217;
+        }
+        .more-projects-button img{
+            padding-right: 17px;
+        }
+        
+
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <a href="/">
+        <img 
+        src="/images/LOGO.png"
+        width="109px"
+        height="92px">
+    </a>
+    <a href="/" class="hamburger">
+        <img 
+        src="/images/Hamburger.png"
+        width="52px"
+        height="18px">
+    </a>
+</nav>
+
+<!-- name and profile photo -->
+<section>
+    <div class="profile-name-photo">
+        <!-- name -->
+        <div class="section1">
+            <div class="back-sign"><!--image--></div>
+            <div class="overlay">
+                <h2 class="name">Atharva Duraphe</h2>
+                <h3 class="user-exp">User Experience Designer</h3>
+            </div>
+        </div>
+    
+        <!-- photo-->
+        <div class="photo"></div>
+    </div>
+
+    <!-- description-->
+    <div class="description">
+        <!--photo-->
+        <div class="rectangle">
+            <img 
+            src="images/DSC_2352.png"
+            width="375px"
+            height="399px">
+        </div>
+        <!--description part-->
+        <div class="desc">
+            <h1 class="namaste" style="font-family: 'Times New Roman', Times, serif;">Namaste...!</h1>
+            <p>I am a passionate and imaginative designer specializing in the captivating realms of UX and UI design. With a Master's
+                 degree from the prestigious Indian Institute of Technology, Roorkee, I bring a wealth of expertise, creativity, and a
+                  fresh perspective to every project I undertake. My dedication to creating seamless user experiences and visually stunning 
+                  interfaces is evident in my portfolio, which showcases my ability to harmoniously blend innovation with captivating visual 
+                  design. With meticulous attention to detail, a keen eye for aesthetics, and a proficiency in industry standard deliverables; 
+                  I am committed to crafting delightful and engaging designs that leave a lasting impression.</p>
+
+
+        </div>
+        
+        
+    </div>
+
+</section>
+<!--Projects-->
+<section>
+    <div class="projects">
+        <h1 class="project-heading">PROJECTS</h1>
+        <a href="#">
+        <img
+        class="lokar"
+        src="images/LOkar.png"
+        width=""
+        height=""
+        >
+
+        </a>
+        <a href="#">
+            <img
+        class="ex-tour"
+        src="images/Ex- Tour.png"
+        width=""
+        height=""
+        >
+        </a>
+        <a href="#">
+            <img
+        class="choco-carve"
+        src="images/Choco Carve.png"
+        width=""
+        height=""
+        >
+        </a>
+        
+    </div>
+    <!-- More Projects button-->
+    <div class="more-projects-button">
+        <button>
+            <h3>More Projects</h3>
+            <img
+            src="images/Rectangle 25.png"
+            width="25.45px";
+            height="25.44px";
+            >
+        </button>
+
+    </div>
+
+</section>
+<!--FIXED ICONS RIGHT-->
+<a href="#"><img src="./images/LINKEDIN.png" alt=""
+    style="position: fixed; height: 40px; width: 40px; top: 300px; right: 10px; z-index: 2;"></a>
+<a href="#"><img src="./images/BEAHNCE.png" alt=""
+    style="position: fixed; height: 40px; width: 40px; top: 381px; right: 10px; z-index: 2;"></a>
+<a href="#"><img src="./images/INSTA.png" alt=""
+    style="position: fixed; height: 40px; width: 40px; top: 462px; right: 10px; z-index: 2;"></a>
+
+<!-- FOOTER -->
+<p
+style="position: absolute; top: 2527px; left: 537px; width: 400px; font-size: 20px; font-family: Arial, Helvetica, sans-serif; color: white; z-index: -4;">
+Atharva Duraphe 2023 All Rights Reserved
+</p>
+
+</body>
+</html>
