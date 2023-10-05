@@ -1,280 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Work</title>
-
-    <style>
-        body{
-            background-color: #101217;           
-            
-        }
-        /*Navbar*/
-        .navbar{
-            max-width: 1441px;
-            align-items: center;
-            
-            display:flex;
-
-            align-content: stretch;
-            
-            
-        }
-        .logo1{
-           position: absolute; 
-            width: 109px;
-            height: 92px;
-            left: 56px;
-            top: 11px;
-
-            background: url(/images/LOGO.png);
-
-        }
-        .hamburger{
-            position: absolute;            
-            left: 1420px;
-            top: 49px;
-            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));   
-            
-
-        }
-
-        /*Section*/
-        .projects-section{
-            max-width: 1450px;
-        }
-        .projects h1{
-            font-family: 'Satoshi';
-            font-style: normal;
-            font-weight: 900;
-            font-size: 182px;
-            line-height: 246px;
-            /* identical to box height */
-            color: #232833;
-            margin-left: 120px;
-            z-index: 1;
-
-        }
-        .container{
-            margin-top: -236px;
-            display: flex;
-            flex-direction: column;
-            margin-left: 92px;
-            justify-content: space-between;
-            width: 1290px;
-           z-index: 2;
-           
-        }
-        h2{
-            margin-top: 274px;
-            margin-left: 23px;
-            margin-bottom: -28px;
-            font-family: 'Argesta';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 48px;
-            line-height: 48px;
-            /* identical to box height */
-            /* pink */
-            color: #FFE4CC;   
-            
-
-        }
-        h3{
-            margin-left:23px;
-            font-family: 'Satoshi';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 24px;
-            line-height: 32px;
-            /* pink */
-            color: #FFE4CC;
-            margin-right: 153px;
-            
-
-        }
-        .divA{
-            
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            justify-items: center;
-            margin-bottom: 59px;
-        }
-        .div1{
-            background: url(images/Ex-tour-2.png);
-            width: 614px;
-            height: 441px;
-            align-items: center;
-            text-decoration: none;               
-
-        }
-        
-        .div2{
-            background:url(images/lokar-2.png);
-            width: 614px;
-            height: 441px;
-            text-decoration: none;   
-        }
-        .divB{
-            
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-bottom: 59px;
-        }
-        .div5{
-            background: url(images/pic-website.png);
-            width: 614px;
-            height: 441px;
-            text-decoration: none;   
-        }
-        .div6{
-            background:url(images/karigar.png);
-            width: 614px;
-            height: 441px;
-            text-decoration: none;   
-        }
-        .divC{
-            
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-bottom: 59px;
-
-        }
-        .div3{
-            width: 614px;
-            height: 441px;
-            background: url(images/choco-carve-2.png);
-            text-decoration: none;   
-        }
-        .div4{
-            width: 614px;
-            height: 441px;
-            background: url(images/seek-h.png);
-            text-decoration: none;   
-        }
-        .divD{
-            
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-bottom: 59px;
-        }
-        .div7{
-            width: 614px;
-            height: 441px;
-            background:url(images/bhumitra.png);
-            text-decoration: none;   
-        }
-        .div8{
-            width: 614px;
-            height: 441px;
-            background: url(images/ui-elements.png);
-            text-decoration: none;   
-        }
-
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
-<body>
-    <!--Navbar-->
-    <nav class="navbar">
-        <a href="/">
-            <img 
-            src="/images/LOGO.png"
-            width="109px"
-            height="92px">
-        </a>
-        <a href="/" class="hamburger">
-            <img 
-            src="/images/Hamburger.png"
-            width="52px"
-            height="18px">
-        </a>
-    </nav>
 
-    <section class="projects-section">
-        <div class="projects">
-            <!--Projects heading-->
-            <h1>PROJECTS</h1>
-
-            <!--cards-->
-            <div class="container">
-                <!--first group-->
-                <div class="divA">
-                    <a href="#" class="div1">                        
-                        <h2>Ex-Tour</h2>
-                        <h3>An App for Echo Tourism</h3>                        
-                    </a>
-                    <a href="#" class="div2">
-                        <h2>Lokar</h2>
-                        <h3>An App for awareness and promotion of Decanni Wool</h3>
-                    </a>
-
-                </div>                
-                <!--Second group-->
-                <div class="divB">
-                    <a href="#" class="div3">
-                        <h2>Choco-Carve</h2>
-                        <h3>Promotion & awareness initiative of
-                            Kashmiri Walnut Wood Carving</h3>
-                    </a>
-                    <a href="#" class="div4">
-                        <h2>Seek-H</h2>
-                        <h3>
-                            Ux Case Study Of Indian Art 
-                            and Culture
-                        </h3>
-                    </a>
-
-                </div>
-                <!--Third group-->
-                <div class="divC">
-                    <a href="#" class="div5">
-                        <h2>PIC Website</h2>
-                        <h3>Redesigning of Placement and 
-                            Internship Cell, IIT Roorke Website</h3>
-                    </a>
-                    <a href="#" class="div6">
-                        <h2>Karigar</h2>
-                        <h3>Coffee Table Book</h3>
-                    </a>
-
-                </div>
-                <!--fourth group-->
-                <div class="divD">
-                    <a href="#" class="div7">
-                        <h2>Bhumitra</h2>
-                        <h3>Interaction Design Concept for Waste Management System</h3>
-                    </a>
-                    <a href="#" class="div8">
-                        <h2>UI Elements</h2>
-                        <h3>User Interface Elements Design</h3>
-                    </a>
-
-                </div>
-            
+<body style="background-color: #101217;">
+    <div>
+        <!-- TOP ICONS -->
+        <div class="container-fluid mt-5 my-5 z-n1">
+            <div class="row mt-5">
+                <a class="col" href="./index.html">
+                    <img src="./images/LOGO.png" width="109px" height="92px">
+                </a>
+                <a class="col text-end" href="./menu.html">
+                    <img src="./images/Hamburger.png" width="52px" height="18px">
+                </a>
             </div>
-        
         </div>
-    </section>
-<!--FIXED ICONS RIGHT-->
-<a href="#"><img src="./images/LINKEDIN.png" alt=""
-    style="position: fixed; height: 40px; width: 40px; top: 300px; right: 10px; z-index: 2;"></a>
-<a href="#"><img src="./images/BEAHNCE.png" alt=""
-    style="position: fixed; height: 40px; width: 40px; top: 381px; right: 10px; z-index: 2;"></a>
-<a href="#"><img src="./images/INSTA.png" alt=""
-    style="position: fixed; height: 40px; width: 40px; top: 462px; right: 10px; z-index: 2;"></a>
+        <div class="mx-5 mt-5 container-fluid">
+            <img src="./images/PROJECT.png" alt="" class="img-fluid px-5"
+                style="position: absolute; z-index: -1; height: 10rem;">
+        </div>
 
-<!-- FOOTER -->
-<p
-style="position: absolute; top: 2527px; left: 537px; width: 400px; font-size: 20px; font-family: Arial, Helvetica, sans-serif; color: white; z-index: -4;">
-Atharva Duraphe 2023 All Rights Reserved
-</p>
+        <div class="container-fluid " style="padding-top: 7rem;">
+            <div class="row">
+                <div class="col text-end"><a href="https://drive.google.com/file/d/1-R8F8n7aUyf8Srpi8Y79C0wHxS7sax8P/view"><img
+                            src="./images/Ex-tour-2.png" alt="" class="img-fluid mt-2 ms-2"></a></div>
+                <div class="col"><a href="https://drive.google.com/file/d/17wjCEw5gZLaGYgtHnY3f5B7RRbQkykkp/view"><img
+                            src="./images/lokar-2.png" alt="" class="img-fluid mt-2 ms-1"></a></div>
+            </div>
+            <div class="row">
+                <div class="col text-end"><a href=""><img src="./images/choco-carve-2.png" alt=""
+                            class="img-fluid mt-2 ms-2"></a></div>
+                <div class="col"><a href="https://drive.google.com/file/d/1KRgN52jc_e9qUz-3w7c5rMoVM3TLgJR6/view"><img
+                            src="./images/seek-h.png" alt="" class="img-fluid mt-2 ms-1"></a></div>
+            </div>
+            <div class="row">
+                <div class="col text-end"><a href="https://www.iitr.ac.in/Placements/pages/index.html"><img
+                            src="./images/pic-website.png" alt="" class="img-fluid mt-2 ms-2"></a></div>
+                <div class="col"><a href="https://www.behance.net/gallery/164429303/Kaarigar-An-art-exploration"><img
+                            src="./images/karigar.png" alt="" class="img-fluid mt-2 ms-1"></a></div>
+            </div>
+            <div class="row">
+                <div class="col text-end"><a href="https://drive.google.com/file/d/1wWdduLOnqn7V8MCp45DkoPCVNcCrI4EH/view"><img
+                            src="./images/bhumitra.png" alt="" class="img-fluid mt-2 ms-2"></a></div>
+                <div class="col"><a href="https://drive.google.com/file/d/10Gw_ebklN-sv3WoDpapIoePffJWVVZlR/view"><img
+                            src="./images/ui-elements.png" alt="" class="img-fluid mt-2 ms-1"></a></div>
+            </div>
+        </div>
+        <!-- FOOTER -->
+        <div>
+            <p class="dull-text fs-5" style="text-align: center;">
+                Atharva Duraphe 2023 All Rights Reserved
+            </p>
+        </div>
+
+        <!--FIXED ICONS RIGHT-->
+        <div>
+            <a href="#"><img src="./images/LINKEDIN.png" alt=""
+                    style="position: fixed; height: 3rem; width: 3rem; top: 10rem; right: 0.3rem; z-index: 2;"></a>
+            <a href="#"><img src="./images/BEAHNCE.png" alt=""
+                    style="position: fixed; height: 3rem; width: 3rem; top: 15rem; right: 0.3rem; z-index: 2;"></a>
+            <a href="#"><img src="./images/INSTA.png" alt=""
+                    style="position: fixed; height: 3rem; width: 3rem; top: 20rem; right: 0.3rem; z-index: 2;"></a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
