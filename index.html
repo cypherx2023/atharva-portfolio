@@ -7,12 +7,26 @@
     <title>Home Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
     <style>
+        /* @font-face {
+            font-family: "Argesta";
+            src: url("Argesta.woff2") format("woff2"),
+                url("Argesta.woff") format("woff");
+            font-weight: 400;
+            font-style: normal;
+        } */
+
         .back-sign-text {
 
             font-size: 4rem;
-            font-family: 'Times New Roman', Times, serif;
+            font-family: "Playfair Display", serif;
             color: #F5933E;
             z-index: 0;
         }
@@ -20,7 +34,7 @@
         .back-sign-text-2 {
 
             font-size: 2rem;
-            font-family: 'Times New Roman', Times, serif;
+            font-family: Roboto, sans-serif;
             color: #F5933E;
             z-index: 0;
         }
@@ -32,61 +46,111 @@
 
         .orange-text-serif {
             font-size: 5rem;
-            font-family: 'Times New Roman', Times, serif;
+            font-family: "Playfair Display", serif;
+            color: #F5933E;
+            z-index: 0;
+        }
+
+        .orange-text-sanserif {
+            font-size: 5rem;
+            font-family: Roboto, sans-serif;
             color: #F5933E;
             z-index: 0;
         }
 
         .white-text-sanserif {
             font-size: 1rem;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Roboto, sans-serif;
             color: white;
             z-index: 0;
         }
 
         .dull-text {
             font-size: 2rem;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Roboto, sans-serif;
             color: rgba(255, 255, 255, 0.700);
             z-index: 0;
         }
+
+        @keyframes typing {
+            0% {
+                width: 0
+            }
+
+            100% {
+                width: 100%
+            }
+        }
+        
+        #namaste {
+            animation: typing 2.5s steps(10, end) infinite alternate;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 0px solid white;
+            width: 0;
+            color: #F5933E;
+            font-size: 5rem;
+            font-family: Roboto, sans-serif;
+            font-weight: 400;
+            z-index: 0;
+            cursor: 0px; 
+        }
+
+
     </style>
 </head>
 
 <body style="background-color: #101217;">
-    <div>
+    <!-- MENU -->
+    <div class="ham-menu" id="ham_menu" style="background: #101217; z-index: 10; display:none;">
+        <img src="./images/MENU_CONTACT.png" alt="" onclick="w_goto1()"
+            style="position:absolute; right: 76px; z-index: 10; height: 100%;">
+        <img src="./images/MENU_BLOG.png" alt="" onclick="w_goto2()"
+            style="position:absolute; right: 289px; z-index: 10; height: 100%;">
+        <img src="./images/MENU_WORK.png" alt="" onclick="w_goto3()"
+            style="position:absolute; right: 502px; z-index: 10; height: 100%;">
+        <img src="./images/MENU_ABOUT.png" alt="" onclick="w_goto4()"
+            style="position:absolute; right: 715px; z-index: 10; height:100%;">
+        <img src="./images/MENU_CLOSE_2.png" alt="" onclick="w_close()"
+            style="position:absolute; right: 0%; height: 100%; width: 75px; z-index: 10;">
+    </div>
+    <!-- MAIN DIV -->
+    <div id="w_main" style="display: block;">
         <!-- TOP ICONS -->
-        <div class="container-fluid mt-5 my-5 z-n1">
-            <div class="row mt-5">
+        <div class="container-fluid mt-4 z-n1">
+            <div class="row">
                 <a class="col" href="./index.html">
-                    <img src="./images/LOGO.png" width="109px" height="92px">
+                    <img src="./images/LOGO.png" style="width:7rem; height:5.75rem;">
                 </a>
                 <a class="col text-end" href="./menu.html">
-                    <img src="./images/Hamburger.png" width="52px" height="18px">
+                    <img src="./images/Hamburger.png" style="width:3.25rem; height:1.13rem;" class="col pe-2"
+                        onclick="w_menu()">
                 </a>
             </div>
         </div>
 
-        <!-- NAME -->
+        <!-- BACK SIGN AND NAME -->
 
         <section class="container">
             <div class="row">
                 <div class="col ms-5">
                     <div>
+                        <!-- BACK SIGN -->
                         <div class="back-sign " id="back-sign">
                             <img src="./images/BACK SIGN.png" alt="" class="img-fluid">
                         </div>
+                        <!-- NAME -->
                         <div>
-                            <span class="back-sign-text">
+                            <span class="back-sign-text" >
                                 <br><br><br>Atharva Duraphe
                             </span>
-                            <span class="back-sign-text-2">
+                            <span class="back-sign-text-2" style="font-weight: 200;">
                                 <br>User Experience Designer
                             </span>
                         </div>
-                        <!-- <p class="back-sign-text-2">User Experience designer</p> -->
                     </div>
                 </div>
+                <!-- PHOTO 1 -->
                 <div class="col">
                     <img src="./images/Group 276.png" alt="" class="img-fluid">
                 </div>
@@ -94,12 +158,14 @@
         </section>
         <section class="container">
             <div class="row">
+                <!-- PHOTO 2 -->
                 <div class="col ms-5">
-                    <img src="./images/DSC_2352.png" alt="" class="img-fluid bg-light mb-5"> 
+                    <img src="./images/DSC_2352.png" alt="" class="img-fluid bg-light mb-5" style="width: 26rem;">
                 </div>
-                <div class="col">
-                    <p class="orange-text-serif" style="font-family: 'Times New Roman', Times, serif;">Namaste...!</p>
-                    <p class="white-text-sanserif " style="text-align: justify;">
+                <!-- ABOUT ME -->
+                <div class="col" style="margin-left: -2rem;">
+                    <p class="orange-text-sanserif" style="font-weight: 400;" id="namaste">Namaste...!</p>
+                    <p class="white-text-sanserif " style="text-align: justify; color: rgb(245, 222, 222); font-weight: 200; font-size: 1.17rem;">
                         I am a passionate and imaginative designer specializing in the captivating realms of UX and UI
                         design. With a Master's degree from the prestigious Indian Institute of Technology, Roorkee, I
                         bring
@@ -117,36 +183,38 @@
         <!-- PROJECTS -->
         <section>
             <div>
-                <img src="./images/PROJECT.png" alt="" class="img-fluid px-5" style="z-index: -1;">
+                <img src="./images/PROJECT.png" alt="" class="img-fluid ps-5 mt-5 pt-5"
+                    style="z-index: -1; width: 60.2rem; height: 12rem; margin-top: 10rem; margin-left: 2rem;">
             </div>
         </section>
         <section class="container-fluid" style="margin-top: -3%;">
             <div class="row px-5">
                 <a href=""><img src="./images/LOkar.png" alt="" style="width: 100%;"></a>
             </div>
-            <div class="row px-5 py-5">
+            <div class="row px-5 pt-5">
                 <a href=""><img src="./images/Ex- Tour.png" alt="" style="width: 100%;"></a>
             </div>
-            <div class="row px-5">
-                <a href=""><img src="./images/LOkar.png" alt="" style="width: 100%;"></a>
+            <div class="row px-5 pt-5">
+                <a href=""><img src="./images/Choco Carve.png" alt="" style="width: 100%;"></a>
             </div>
-
         </section>
-        <!-- More Projects button-->
-        <div class=" float-end">
-            <button onclick="w_goto_projects()">
-                <p>More Projects <img src="images/Rectangle 25.png"  style="display: inline;"> </p>
-                
-            </button>
-
-        </div>
-
-        <!-- FOOTER -->
-        <div>
-            <p class="dull-text fs-5" style="text-align: center;">
-                Atharva Duraphe 2023 All Rights Reserved
-            </p>
-        </div>
+        <section>
+            <!-- More Projects button-->
+            <div class=" float-end m-5">
+                <button onclick="w_goto_projects()" style="border: 0px;">
+                    <!-- <p style="font-size: 1.25rem; margin: 0.5rem 1rem 0.5rem 1rem;">More Projects <img src="images/Rectangle 25.png" style="display: inline;"> </p> -->
+                    <img src="./images/MORE_PROJ_BTN.png" alt="" style="width: 12rem;" class="m-1">
+                </button>
+            </div>
+        </section>
+        <section>
+            <!-- FOOTER -->
+            <div>
+                <p class="dull-text fs-5" style="text-align: center; z-index: -1;">
+                    <br> Atharva Duraphe 2023 All Rights Reserved
+                </p>
+            </div>
+        </section>
 
         <!--FIXED ICONS RIGHT-->
         <div>
@@ -163,11 +231,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-        <script>
-            function w_goto_projects() {
-                document.location.href = "./work.html";
-            }
-        </script>
+    <script>
+        function w_goto_projects() {
+            document.location.href = "./work.html";
+        }
+    </script>
+    <!-- <script src="./menu.js"></script> -->
 </body>
 
 </html>

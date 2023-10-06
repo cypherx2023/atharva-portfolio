@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="font-size: 1px;">
 
 <head>
     <meta charset="UTF-8">
@@ -14,18 +14,39 @@
             padding: 0;
             background-color: #101217;
         }
+
+        @keyframes translate {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(0%);
+            }
+        }
+
+
+        .ham-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100%;
+            animation: translate 0.5s ease-in-out;
+        }
+
     </style>
     <div class="ham-menu" id="mymenu" style="background: #101217; z-index: 10;">
         <img src="./images/MENU_CONTACT.png" alt="" onclick="w_goto1()"
-            style="position:absolute; right: 76px; z-index: 10; height: 100%;">
+            style="position:absolute; right: 4%; z-index: 10; height: 100%; width: 15%;">
         <img src="./images/MENU_BLOG.png" alt="" onclick="w_goto2()"
-            style="position:absolute; right: 289px; z-index: 10; height: 100%;">
+            style="position:absolute; right: 19%; z-index: 10; height: 100%; width: 15%;">
         <img src="./images/MENU_WORK.png" alt="" onclick="w_goto3()"
-            style="position:absolute; right: 502px; z-index: 10; height: 100%;">
+            style="position:absolute; right: 34%; z-index: 10; height: 100%; width: 15%;">
         <img src="./images/MENU_ABOUT.png" alt="" onclick="w_goto4()"
-            style="position:absolute; right: 715px; z-index: 10; height:100%;">
+            style="position:absolute; right: 49%; z-index: 10; height:100%; width: 15%;">
         <img src="./images/MENU_CLOSE_2.png" alt="" onclick="w_close()"
-            style="position:absolute; right: 0%; height: 100%; width: 75px; z-index: 10;">
+            style="position:absolute; right: 0%; height: 100%; width: 4%; z-index: 10;">
     </div>
 
     <script>
