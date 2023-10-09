@@ -19,33 +19,88 @@
             0% {
                 transform: translateX(100%);
             }
-
+            80% {
+                transform: translateX(-5%);
+            }
+            90% {
+                transform: translateX(5%);
+            }
             100% {
                 transform: translateX(0%);
             }
         }
 
+        @keyframes translate-2 {
+            0% {
+                transform: translateX(200%);
+            }
+            80% {
+                transform: translateX(-5%);
+            }
+            90% {
+                transform: translateX(5%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }
 
-        .ham-menu {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100vh;
-            width: 100%;
-            animation: translate 0.5s ease-in-out;
+        @keyframes translate-3 {
+            0% {
+                transform: translateX(300%);
+            }
+            80% {
+                transform: translateX(-5%);
+            }
+            90% {
+                transform: translateX(5%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }
+
+        @keyframes translate-4 {
+            0% {
+                transform: translateX(400%);
+            }
+            80% {
+                transform: translateX(-5%);
+            }
+            90% {
+                transform: translateX(5%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }
+        #menu-1 {
+            animation: translate 0.1s ease-in-out 0s backwards;
+        }
+        #menu-2 {
+            
+            animation: translate-2 0.2s ease-in-out 0s backwards;
+        }
+        #menu-3 {
+            
+            animation: translate-3 0.3s ease-in-out 0s backwards;
+        }
+        #menu-4 {
+            
+            animation: translate-4 0.4s ease-in-out 0s backwards;
         }
 
     </style>
     <div class="ham-menu" id="mymenu" style="background: #101217; z-index: 10;">
-        <img src="./images/MENU_CONTACT.png" alt="" onclick="w_goto1()"
+        <img id="menu-1" src="./images/MENU_CONTACT.png" alt="" onclick="w_goto1()"
             style="position:absolute; right: 4%; z-index: 10; height: 100%; width: 15%;">
-        <img src="./images/MENU_BLOG.png" alt="" onclick="w_goto2()"
+        <img id="menu-2" src="./images/MENU_BLOG.png" alt="" onclick="w_goto2()"
             style="position:absolute; right: 19%; z-index: 10; height: 100%; width: 15%;">
-        <img src="./images/MENU_WORK.png" alt="" onclick="w_goto3()"
+        <img id="menu-3" src="./images/MENU_WORK.png" alt="" onclick="w_goto3()"
             style="position:absolute; right: 34%; z-index: 10; height: 100%; width: 15%;">
-        <img src="./images/MENU_ABOUT.png" alt="" onclick="w_goto4()"
+        <img id="menu-4" src="./images/MENU_ABOUT.png" alt="" onclick="w_goto4()"
             style="position:absolute; right: 49%; z-index: 10; height:100%; width: 15%;">
-        <img src="./images/MENU_CLOSE_2.png" alt="" onclick="w_close()"
+        <img id="menu-5" src="./images/MENU_CLOSE_2.png" alt="" onclick="w_close()"
             style="position:absolute; right: 0%; height: 100%; width: 4%; z-index: 10;">
     </div>
 

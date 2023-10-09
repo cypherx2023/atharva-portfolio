@@ -10,30 +10,136 @@
 </head>
 
 <body style="background-color: #101217;">
-    <div>
+    <!-- MENU -->
+    <div class="ham-menu" id="w_menu" style="background: #101217; z-index: 10; display: none;">
+        <img id="menu-1" src="./images/MENU_CONTACT.png" alt="" onclick="w_goto1()"
+            style="position:absolute; right: 4%; z-index: 10; height: 100%; width: 15%;">
+        <img id="menu-2" src="./images/MENU_BLOG.png" alt="" onclick="w_goto2()"
+            style="position:absolute; right: 19%; z-index: 10; height: 100%; width: 15%;">
+        <img id="menu-3" src="./images/MENU_WORK.png" alt="" onclick="w_goto3()"
+            style="position:absolute; right: 34%; z-index: 10; height: 100%; width: 15%;">
+        <img id="menu-4" src="./images/MENU_ABOUT.png" alt="" onclick="w_goto4()"
+            style="position:absolute; right: 49%; z-index: 10; height:100%; width: 15%;">
+        <img id="menu-5" src="./images/MENU_CLOSE_2.png" alt="" onclick="w_close()"
+            style="position:absolute; right: 0%; height: 100%; width: 4%; z-index: 10;">
+    </div>
+    <style>
+        @keyframes translate {
+            0% {
+                transform: translateX(100%);
+            }
+
+            80% {
+                transform: translateX(-5%);
+            }
+
+            90% {
+                transform: translateX(5%);
+            }
+
+            100% {
+                transform: translateX(0%);
+            }
+        }
+
+        @keyframes translate-2 {
+            0% {
+                transform: translateX(200%);
+            }
+
+            80% {
+                transform: translateX(-5%);
+            }
+
+            90% {
+                transform: translateX(5%);
+            }
+
+            100% {
+                transform: translateX(0%);
+            }
+        }
+
+        @keyframes translate-3 {
+            0% {
+                transform: translateX(300%);
+            }
+
+            80% {
+                transform: translateX(-5%);
+            }
+
+            90% {
+                transform: translateX(5%);
+            }
+
+            100% {
+                transform: translateX(0%);
+            }
+        }
+
+        @keyframes translate-4 {
+            0% {
+                transform: translateX(400%);
+            }
+
+            80% {
+                transform: translateX(-5%);
+            }
+
+            90% {
+                transform: translateX(5%);
+            }
+
+            100% {
+                transform: translateX(0%);
+            }
+        }
+
+        #menu-1 {
+            animation: translate 0.1s ease-in-out 0s backwards;
+        }
+
+        #menu-2 {
+
+            animation: translate-2 0.2s ease-in-out 0s backwards;
+        }
+
+        #menu-3 {
+
+            animation: translate-3 0.3s ease-in-out 0s backwards;
+        }
+
+        #menu-4 {
+
+            animation: translate-4 0.4s ease-in-out 0s backwards;
+        }
+    </style>
+    <script src="./w_menu.js"></script>
+    <div id="w_main">
         <!-- TOP ICONS -->
-        <div class="container-fluid mt-5 my-5 z-n1">
+        <div class="container mt-5 my-5 z-n1">
             <div class="row mt-5">
                 <a class="col" href="./index.html">
                     <img src="./images/LOGO.png" width="109px" height="92px">
                 </a>
-                <a class="col text-end" href="./menu.html">
-                    <img src="./images/Hamburger.png" width="52px" height="18px">
+                <a class="col text-end">
+                    <img src="./images/Hamburger.png" width="52px" height="18px" onclick="w_menu()">
                 </a>
             </div>
         </div>
-        <div class="mx-5 mt-5 container-fluid">
+        <div class="mx-5 mt-5 container">
             <img src="./images/LINKEDIN_POST.png" alt="" class="img-fluid px-5"
                 style="position: absolute; z-index: -1; height: 8rem; width: 80rem;">
         </div>
 
-        <div class="container-fluid " style="padding-top: 7rem;">
-            <div class="row justify-content-center ">
-                <div class="col-md-6 col-12 text-end "><a href="https://drive.google.com/file/d/1jwcTE4B7Xcsy7JNJFIJ1zzZie-69FofA/view"><img
+        <div class="container" style="padding-top: 7rem;">
+            <div class="row">
+                <div class="col-6"><a href="https://drive.google.com/file/d/1jwcTE4B7Xcsy7JNJFIJ1zzZie-69FofA/view"><img
                             src="./images/1.png" alt="" class="img-fluid mt-2 ms-2"
                             style="height: 35rem; width: 35rem;"></a></div>
-                <div class="col-md-6 col-12"><a href="https://drive.google.com/file/d/11tj8MhoDse7rEeSZqL9wtLVFwlkXhbuB/view"><img
-                            src="./images/11.png" alt="" class=" img-fluid mt-2 ms-1"
+                <div class="col-6"><a href="https://drive.google.com/file/d/11tj8MhoDse7rEeSZqL9wtLVFwlkXhbuB/view"><img
+                            src="./images/11.png" alt="" class="img-fluid mt-2 ms-1"
                             style="height: 35rem; width: 35rem;"></a></div>
             </div>
 
@@ -46,11 +152,11 @@
         </div>
         <!--FIXED ICONS RIGHT-->
         <div>
-            <a href="#"><img src="./images/LINKEDIN.png" alt=""
+            <a href="https://www.linkedin.com/in/atharva-duraphe-961b921b1"><img src="./images/LINKEDIN.png" alt=""
                     style="position: fixed; height: 3rem; width: 3rem; top: 10rem; right: 0.3rem; z-index: 2;"></a>
-            <a href="#"><img src="./images/BEAHNCE.png" alt=""
+            <a href="https://www.behance.net/atharvadur6d52"><img src="./images/BEAHNCE.png" alt=""
                     style="position: fixed; height: 3rem; width: 3rem; top: 15rem; right: 0.3rem; z-index: 2;"></a>
-            <a href="#"><img src="./images/INSTA.png" alt=""
+            <a href="https://www.instagram.com/atharva_duraphe_10"><img src="./images/INSTA.png" alt=""
                     style="position: fixed; height: 3rem; width: 3rem; top: 20rem; right: 0.3rem; z-index: 2;"></a>
         </div>
 
