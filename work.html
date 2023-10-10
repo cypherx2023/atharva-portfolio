@@ -9,6 +9,7 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -31,14 +32,12 @@
             font-style: normal;
         }
     .img-text-1 {
-        position: absolute;
-        z-index: 2;
-        margin: -10% 2%;
-        ;
+      
+     
         font-family: Argesta, "Playfair Display", serif;
-        font-size: 3rem;
+        font-size: 1.5rem;
         color: white;
-        line-height: 1rem;
+      
         font-weight: 100;
 
     }
@@ -46,9 +45,78 @@
     .img-text-2 {
         font-family: satoshi, Roboto, sans-serif;
         font-weight: 100;
-        font-size: 1.5rem;
+        font-size: 1rem;
+    }
+    .first{
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.57) 34.17%, rgba(0, 0, 0, 0.00) 100%), url("./images/Ex-tour-2.png"), lightgray 50% / cover no-repeat;
 
     }
+    .second{
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.57) 34.17%, rgba(0, 0, 0, 0.00) 100%), url("./images/lokar-2.png"), lightgray 50% / cover no-repeat;
+
+    }
+    .third{
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.57) 34.17%, rgba(0, 0, 0, 0.00) 100%), url("./images/choco-carve-2.png"), lightgray 50% / cover no-repeat;
+
+    }
+    .forth{
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.57) 34.17%, rgba(0, 0, 0, 0.00) 100%), url("./images/seek-h.png"), lightgray 50% / cover no-repeat;
+
+    }
+    .fifth{
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.57) 34.17%, rgba(0, 0, 0, 0.00) 100%), url("./images/pic-website.png"), lightgray 50% / cover no-repeat;
+
+    }
+    .sixth{
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.57) 34.17%, rgba(0, 0, 0, 0.00) 100%), url("./images/karigar.png"), lightgray 50% / cover no-repeat;
+
+    }
+    .seventh{
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.57) 34.17%, rgba(0, 0, 0, 0.00) 100%), url("./images/bhumitra.png"), lightgray 50% / cover no-repeat;
+
+    }
+    .eighth{
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.57) 34.17%, rgba(0, 0, 0, 0.00) 100%), url("./images/ui-elements.png"), lightgray 50% / cover no-repeat;
+
+    }
+
+    .background-container {
+      /* Apply the background gradient and image */
+      /* background-image: url("./images/Ex-tour-2.png"); */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+     
+
+      /* Set the background color to lightgray at 50% opacity */
+      background-color: rgba(211, 211, 211, 0.5);
+ 
+      height: 350px !important;
+     
+      /* Center-align text vertically and horizontally */
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+
+      /* Text styles */
+      color: white;
+      font-size: 24px;
+     
+    }
+    
+    @media (min-width:768px) {
+        .img-text-1 {
+            font-size: 3rem;
+        }
+        .img-text-2 {
+            font-size: 1.5rem; 
+        }
+          .background-container{
+ 
+            height:450px !important;
+          }
+    }
+
 </style>
 
 <body style="background-color: #101217;">
@@ -157,84 +225,111 @@
             animation: translate-4 0.4s ease-in-out 0s backwards;
         }
     </style>
-    <div id="w_main">
+    <div id="w_main relative">
         <!-- TOP ICONS -->
-        <div class="container-fluid mt-5 my-5 z-n1">
-            <div class="row mt-5">
-                <a class="col" href="./index.html">
-                    <img src="./images/LOGO.png" width="109px" height="92px">
+        <div class="absolute top-0 right-0 left-0">
+            <div class="flex justify-between align-center p-3">
+                <a  href="./index.html">
+                    <img src="./images/LOGO.png" style="width:7rem; height:5.75rem;">
                 </a>
-                <a class="col text-end" >
-                    <img src="./images/Hamburger.png" width="52px" height="18px" onclick="w_menu()">
+                <a class="text-end cursor-pointer">
+                    <img src="./images/Hamburger.png" style="width:3.25rem; height:1.13rem;" class="col pe-2"
+                        onclick="w_menu()">
                 </a>
             </div>
         </div>
-        <div class="mx-5 mt-5 container-fluid">
-            <img src="./images/WORK.png" alt="" class="img-fluid px-5"
-                style="position: absolute; z-index: -1; height: 10rem;">
+        <div class="mx-5 mt-5 md:pt-20 pt-32">
+            <img src="./images/PROJECT.png" alt="" class="px-5">
         </div>
 
-        <div class="container-fluid " style="padding-top: 7rem;">
-            <div class="row m-4">
-                <div class="col"><a href="https://drive.google.com/file/d/1-R8F8n7aUyf8Srpi8Y79C0wHxS7sax8P/view"><img
-                            src="./images/Ex-tour-2.png" alt="" class="img-fluid mt-2 ms-2">
-                        <p class="img-text-1">Ex-Tour <br><br> <span class="img-text-2">An app for Eco Tourism</span>
-                        </p>
-                    </a></div>
-                <div class="col"><a href="https://drive.google.com/file/d/17wjCEw5gZLaGYgtHnY3f5B7RRbQkykkp/view"><img
-                            src="./images/lokar-2.png" alt="" class="img-fluid mt-2 ms-1">
-                        <p class="img-text-1">Lokar <br><br> <span class="img-text-2">An app for awareness and promotion
-                                <br>
-                                of the Deccani Wool</span></p>
-                    </a></div>
+        <div  style="margin-top: -4rem;" class="pt-16 md:pt-0">
+            <div class="row mx-3 justify-content-center align-center md:pr-16">
+                <div class="col-md-6 col-12 my-2" >
+                    <div class="background-container w-full h-full first p-5 " >
+                        <a href="https://drive.google.com/file/d/1-R8F8n7aUyf8Srpi8Y79C0wHxS7sax8P/view">
+                            <div class="img-text-1">Ex-Tour </div>
+                      <div class="img-text-2">An app for Eco Tourism</div>
+                           
+                        </a>
+                    </div>
+                   </div>
+                <div class="col-md-6 col-12  my-2">
+                    <div class="background-container w-full h-full second p-5" >
+                    <a href="https://drive.google.com/file/d/17wjCEw5gZLaGYgtHnY3f5B7RRbQkykkp/view">
+                        <div class="img-text-1">Lokar </div> <div class="img-text-2">An app for awareness and promotion<br>
+                              
+                                of the Deccani Wool</div>
+                    </a>
+                </div>
+                </div>
             </div>
-            <div class="row m-4">
-                <div class="col"><a href=""><img src="./images/choco-carve-2.png" alt="" class="img-fluid mt-2 ms-2">
-                        <p class="img-text-1">Choco Carve <br><br> <span class="img-text-2">Promotion & awareness
-                                initiative of
-                                <br> Kashmiri Walnut Wood Carving</span>
-                        </p>
-                    </a></div>
-                <div class="col"><a href="https://drive.google.com/file/d/1KRgN52jc_e9qUz-3w7c5rMoVM3TLgJR6/view"><img
-                            src="./images/seek-h.png" alt="" class="img-fluid mt-2 ms-1">
-                        <p class="img-text-1">Seek-h <br><br> <span class="img-text-2">Ux Case Study Of Indian <br> Art
-                                and Culture</span></p>
-                    </a></div>
+            <div class="row mx-3 justify-content-center align-center  md:pr-16">
+                <div class="col-md-6 col-12  my-2">
+                    <div class="background-container w-full h-full third p-5">
+                        <a href=""><img src="" alt="" class="img-fluid mt-2 ms-2">
+                            <div class="img-text-1">Choco Carve  </div> <div class="img-text-2">Promotion & awareness
+                                    initiative of
+                                    <br> Kashmiri Walnut Wood Carving</div>
+                           
+                        </a>
+                    </div>
+                   
+                </div>
+                <div class="col-md-6 col-12  my-2">
+                    <div class="background-container w-full h-full forth p-5">
+                        <a href="https://drive.google.com/file/d/1KRgN52jc_e9qUz-3w7c5rMoVM3TLgJR6/view">
+                        <div class="img-text-1">Seek-h </div> <div class="img-text-2">Ux Case Study Of Indian <br> Art
+                                and Culture</div>
+                    </a>
+                    </div>
+                   </div>
             </div>
-            <div class="row m-4">
-                <div class="col"><a href="https://www.iitr.ac.in/Placements/pages/index.html"><img
-                            src="./images/pic-website.png" alt="" class="img-fluid mt-2 ms-2">
-                        <p class="img-text-1">PIC Website <br><br> <span class="img-text-2">Redesigning of Placement and
-                                <br>
-                                Internship Cell, IIT Roorke Website</span></p>
-                    </a></div>
-                <div class="col"><a href="https://www.behance.net/gallery/164429303/Kaarigar-An-art-exploration"><img
-                            src="./images/karigar.png" alt="" class="img-fluid mt-2 ms-1">
-                        <p class="img-text-1">Karigar <br><br><br> <span class="img-text-2">Coffee Table Book</span></p>
-                    </a></div>
+            <div class="row mx-3 justify-content-center align-center  md:pr-16">
+                <div class="col-md-6 col-12  my-2">
+                <div class="background-container w-full h-full fifth p-5">
+                    <a href="https://www.iitr.ac.in/Placements/pages/index.html">
+                    <div class="img-text-1">PIC Website </div> <div class="img-text-2">Redesigning of Placement and
+                            <br>
+                            Internship Cell, IIT Roorke Website</div>
+                </a>
+                </div>
+                   </div>
+                <div class="col-md-6 col-12  my-2">
+                    <div class="background-container w-full h-full sixth p-5">
+                        <a href="https://www.behance.net/gallery/164429303/Kaarigar-An-art-exploration">
+                        <div class="img-text-1">Karigar </div> <div class="img-text-2">Coffee Table Book</div>
+                    </a>
+                    </div>
+                 </div>
             </div>
-            <div class="row m-4">
-                <div class="col"><a href="https://drive.google.com/file/d/1wWdduLOnqn7V8MCp45DkoPCVNcCrI4EH/view"><img
-                            src="./images/bhumitra.png" alt="" class="img-fluid mt-2 ms-2">
-                        <p class="img-text-1">Bhumitra <br><br> <span class="img-text-2">Interaction Design Concept for
-                                <br> Waste Management System</span></p>
-                    </a></div>
-                <div class="col"><a href="https://drive.google.com/file/d/10Gw_ebklN-sv3WoDpapIoePffJWVVZlR/view"><img
-                            src="./images/ui-elements.png" alt="" class="img-fluid mt-2 ms-1">
-                        <p class="img-text-1">UI Elements <br><br> <span class="img-text-2">User Interface Elements
-                                Design</span></p>
-                    </a></div>
+            <div class="row mx-3 justify-content-center align-center  md:pr-16">
+                <div class="col-md-6 col-12  my-2">
+                    <div class="background-container w-full h-full seventh p-5">
+                        <a href="https://drive.google.com/file/d/1wWdduLOnqn7V8MCp45DkoPCVNcCrI4EH/view">
+                            <div class="img-text-1">Bhumitra</div>  <div class="img-text-2">Interaction Design Concept for
+                                    <br> Waste Management System</div>
+                        </a>
+                    </div>
+                  </div>
+                <div class="col-md-6 col-12  my-2">
+                    <div class="background-container w-full h-full eighth p-5">
+                        <a href="https://drive.google.com/file/d/10Gw_ebklN-sv3WoDpapIoePffJWVVZlR/view">
+                            <div class="img-text-1">UI Elements </div> <div class="img-text-2">User Interface Elements
+                                    Design</div>
+                        </a>
+                    </div>
+                  </div>
             </div>
         </div>
         <!-- FOOTER -->
         <div>
-            <p class="dull-text fs-5" style="text-align: center;">
+            <p class="dull-text fs-5 mt-10" style="text-align: center;">
                 Atharva Duraphe 2023 All Rights Reserved
             </p>
         </div>
 
         <!--FIXED ICONS RIGHT-->
-        <div>
+        <div class="md:block hidden">
             <a href="https://www.linkedin.com/in/atharva-duraphe-961b921b1"><img src="./images/LINKEDIN.png" alt=""
                     style="position: fixed; height: 3rem; width: 3rem; top: 10rem; right: 0.3rem; z-index: 2;"></a>
             <a href="https://www.behance.net/atharvadur6d52"><img src="./images/BEAHNCE.png" alt=""

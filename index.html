@@ -13,15 +13,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @font-face {
-            font-family: "Argesta";
-            src: url("Argesta.woff2") format("woff2"),
-                url("Argesta.woff") format("woff");
-            font-weight: 200;
-            font-style: normal;
-        }
+  font-family: 'Argesta';
+  src: url('Fonts/Argesta-Headline.otf') format('opentype');
+     
+  /* You can include more formats here if you have them */
+  font-weight: normal;
+  font-style: normal;
+}
 
         @font-face {
             font-family: "Satoshi";
@@ -50,7 +51,7 @@
         #back-sign {
             position: absolute;
             z-index: -1;
-            left: 5rem;
+            
 
         }
 
@@ -60,6 +61,25 @@
             color: #F5933E;
             z-index: 0;
         }
+.name-text{
+    margin-top: -5rem;
+    text-align: center;
+} .back-sign-text {
+
+font-size: 2.5rem;
+font-family: Argesta, "Playfair Display", serif;
+font-weight: 200;
+color: #F5933E;
+z-index: 0;
+}
+
+.back-sign-text-2 {
+
+font-size: 1rem;
+font-family: Satoshi, Roboto, sans-serif;
+color: #F5933E;
+z-index: 0;
+}
 
         .orange-text-sanserif {
             font-size: 5rem;
@@ -69,10 +89,11 @@
         }
 
         .white-text-sanserif {
-            font-size: 1rem;
+          
             font-family: Satoshi, Roboto, sans-serif;
-            color: white;
+            text-align: justify; 
             z-index: 0;
+            color: var(--pink, #FFE4CC); 
         }
 
         .dull-text {
@@ -82,43 +103,68 @@
             z-index: 0;
         }
 
-        @keyframes typing {
-            0% {
-                width: 0;
-            }
+        .text_1 {
+  animation: text1;
+}
 
-            100% {
-                width: 100%;
-            }
-        }
+.text_2 {
+  animation: text2;
+}
 
-        #namaste {
-            animation: typing 2.5s steps(10, end) infinite alternate;
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: 0px solid white;
-            width: 0;
-            color: #F5933E;
-            font-size: 5rem;
-            font-family: Satoshi, Roboto, sans-serif;
-            font-weight: 400;
-            z-index: 0;
-            cursor: 0px;
-        }
+.text_1, .text_2 {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  animation-duration: 20s;
+  animation-timing-function: steps(25, end);
+  animation-iteration-count: infinite;
+  color: var(--orange, #F5933E);
+font-family: Satoshi;
+font-size: 2rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
 
-        #hello {
-            animation: typing 2.5s steps(10, end) 2.5s infinite alternate;
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: 0px solid white;
-            width: 0;
-            color: #F5933E;
-            font-size: 5rem;
-            font-family: Satoshi, Roboto, sans-serif;
-            font-weight: 400;
-            z-index: 0;
-            cursor: 0px;
-        }
+.text_1::after, .text_2::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  animation: caret infinite;
+  animation-duration: 1s;
+  animation-timing-function: steps(1, end);
+}
+
+@keyframes text2 {
+  0%, 50%, 100% {
+    width: 0;
+  }
+  
+  60%, 90% {
+    width: 4em;
+  }
+}
+
+@keyframes text1 {
+  0%, 50%, 100% {
+    width: 0;
+  }
+  10%, 40% {
+    width: 6em;
+  }
+}
+
+@keyframes caret {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+      
     </style>
     <style>
         .img-text-1 {
@@ -141,11 +187,181 @@
             font-size: 1.5rem;
 
         }
+        .image-bottom{
+            height: 15rem;
+            width: 100%;
+        }
 
         .hover-1:hover .img-text-1 {
             display: block;
-            text-shadow: 0px 5px 100px rgb(0, 0, 0);
+            /* text-shadow: 0px 5px 100px rgb(0, 0, 0); */
+           
             opacity: 0.8;
+        }
+        .text-title{
+            color: var(--pink, #FFE4CC);
+            font-family: Argesta; 
+            font-size: 1rem !important;
+        }
+        .text-description{
+            color: var(--pink, #FFE4CC);
+            font-family: Satoshi; 
+        }
+       .footer{
+        background: var(--pink, #FFE4CC);
+        color: var(--blue, #232833);
+font-family: Satoshi;
+font-size: 14px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+       }
+        @media (min-width:768px) {
+            .name-text{
+    margin-top: -5rem;
+margin-left: 2rem;
+text-align: left;
+
+}
+.text_1, .text_2 {
+    font-size: 4rem;
+}
+.back-sign-text {
+
+font-size: 4rem;
+font-family: Argesta, "Playfair Display", serif;
+font-weight: 200;
+color: #F5933E;
+z-index: 0;
+}
+
+.back-sign-text-2 {
+
+font-size: 2rem;
+font-family: Satoshi, Roboto, sans-serif;
+color: #F5933E;
+z-index: 0;
+}
+.image-bottom{
+            height: 100%;
+            width: 100%;
+        }
+        *, *:before, *:after{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:border-box;
+  box-sizing: border-box;
+}
+
+body{
+  background: #f9f9f9;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.main-title{
+  color: #2d2d2d;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 0.7em 0;
+}
+
+.container{
+  padding: 1em 0;
+  float: left;
+  width: 50%;
+}
+@media screen and (max-width: 640px){
+  .container{
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 900px){
+  .container{
+    width: 33.33333%;
+  }
+}
+
+.container .title{
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+ 
+  margin: auto;
+  overflow: hidden;
+}
+
+.content .content-overlay {
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 10;
+  top: 10;
+  bottom: 10;
+  right: 20;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay{
+  opacity: 1;
+}
+
+.content-image{
+  width: 100%;
+}
+
+.content-details {
+  position: absolute;
+  text-align: left;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  bottom: 0;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details{
+  bottom: 0;
+  left: 50%;
+  opacity: 1;
+}
+
+.content-details h3{
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+
+
+
+
+.fadeIn-left{
+  left: 20%;
+}
+
+
         }
     </style>
 
@@ -258,14 +474,14 @@
         }
     </style>
     <!-- MAIN DIV -->
-    <div id="w_main" style="display: block;">
+    <div id="w_main" style="display: block;" class="relative">
         <!-- TOP ICONS -->
-        <div class="container-fluid mt-4 z-n1">
-            <div class="row">
-                <a class="col" href="./index.html">
+        <div class="absolute top-0 right-0 left-0">
+            <div class="flex justify-between align-center p-3">
+                <a  href="./index.html">
                     <img src="./images/LOGO.png" style="width:7rem; height:5.75rem;">
                 </a>
-                <a class="col text-end">
+                <a class="text-end cursor-pointer">
                     <img src="./images/Hamburger.png" style="width:3.25rem; height:1.13rem;" class="col pe-2"
                         onclick="w_menu()">
                 </a>
@@ -274,16 +490,16 @@
 
         <!-- BACK SIGN AND NAME -->
 
-        <section class="container">
-            <div class="row">
-                <div class="col me-5">
-                    <div>
+        <section >
+            <div class="flex justify-center items-cemter md:flex-row flex-col-reverse">
+                <div class="grid mx-auto ">
+                    <div class="relative md:mt-36">
                         <!-- BACK SIGN -->
-                        <div class="back-sign me-5 ps-5" id="back-sign">
+                        <div class="back-sign " id="back-sign">
                             <img src="./images/BACK SIGN.png" alt="" class="img-fluid">
                         </div>
                         <!-- NAME -->
-                        <div class="align-right">
+                        <div class="items-right name-text">
                             <span class="back-sign-text">
                                 <br><br><br>Atharva Duraphe
                             </span>
@@ -294,95 +510,186 @@
                     </div>
                 </div>
                 <!-- PHOTO 1 -->
-                <div class="col-md-6 col-sm-6 back-sign">
-                    <img src="./images/Group 276.png" alt="" class="img-fluid">
+                <div class=" back-sign mt-20  ml-16 md:ml-1">
+                    <img src="./images/Group 276.png" alt="" class="img-cover">
                 </div>
             </div>
         </section>
         <!-- ABOUT ME -->
-        <section class="container" style="margin-top: 12rem;">
-            <div class="row">
+        <section  style="margin-top: 12rem;">
+            <div class="grid grid-cols-2 gap-2 p-3 items-center">
                 <!-- PHOTO 2 -->
-                <div class="col-5">
-                    <img src="./images/DSC_2352-2.png" alt="" class="img-fluid bg-light mb-5">
+                <div class="md:col-span-1 col-span-2 md:px-24">
+                    <img src="./images/DSC_2352-2.png" alt="" class="bg-light img-fluid ">
                 </div>
                 <!-- ABOUT ME -->
-                <div class="col" style="margin-left: 5rem;">
-                    <p class="orange-text-sanserif" style="font-weight: 400;" id="namaste">
-                        Namaste...!
-                    </p>
-                    <p class="white-text-sanserif "
-                        style="text-align: justify; color: rgb(245, 222, 222); font-weight: 200; font-size: 1.157rem;">
-                        I am a passionate and imaginative designer specializing in the captivating realms of UX and UI
-                        design. With a Master's degree from the prestigious Indian Institute of Technology, Roorkee, I
-                        bring
-                        a wealth of expertise, creativity, and a fresh perspective to every project I undertake. My
-                        dedication to creating seamless user experiences and visually stunning interfaces is evident in
-                        my
-                        portfolio, which showcases my ability to harmoniously blend innovation with captivating visual
-                        design. With meticulous attention to detail, a keen eye for aesthetics, and a proficiency in
-                        industry standard deliverables; I am committed to crafting delightful and engaging designs that
-                        leave a lasting impression.
-                    </p>
+                <div class="md:col-span-1 col-span-2  md:pr-24">
+                    <h1><span class="text_1">Namskar...!</span>
+                        <span class="text_2">Hello...!</span>
+                    </h1>
+                    
+                        
+    
+                        <p class="white-text-sanserif "
+                           >
+                            I am a passionate and imaginative designer specializing in the captivating realms of UX and UI
+                            design. With a Master's degree from the prestigious Indian Institute of Technology, Roorkee, I
+                            bring
+                            a wealth of expertise, creativity, and a fresh perspective to every project I undertake. My
+                            dedication to creating seamless user experiences and visually stunning interfaces is evident in
+                            my
+                            portfolio, which showcases my ability to harmoniously blend innovation with captivating visual
+                            design. With meticulous attention to detail, a keen eye for aesthetics, and a proficiency in
+                            industry standard deliverables; I am committed to crafting delightful and engaging designs that
+                            leave a lasting impression.
+                        </p>
+                </div>
+              
                 </div>
             </div>
         </section>
         <!-- PROJECTS -->
         <section>
-            <div>
+            <div class="md:mx-20 md:mr-64 mr-10">
                 <img src="./images/PROJECT.png" alt="" class="img-fluid ps-5 mt-5 pt-5"
-                    style="z-index: -1; width: 60.2rem; height: 12rem; margin-top: 10rem; margin-left: 2rem;">
+                    style="z-index: -1;">
             </div>
         </section>
-        <section class="container-fluid" style="margin-top: -3%;">
-            <div class="row px-5 hover-1">
-                <a href=""><img src="./images/LOkar.png" alt="" style="width: 100%;">
-                    <p class="img-text-1">Lokar <br><br> <span class="img-text-2">An app for awareness and promotion
+        <section  style="margin-top: -3%;" class="md:mx-10 hidden md:block">
+            <div class="md:px-5 px-3 content pt-2 hover-1">
+                <div class="content-overlay"></div>
+                <a href=""><img src="./images/LOkar.png" alt=""  class="image-bottom object-cover object-center content-image">
+                    <div class="content-details fadeIn-left">
+                        <p class="img-text-1">Lokar <br><br> <span class="img-text-2">An app for awareness and promotion
                             <br>
                             of the Deccani Wool</span></p>
+                    </div>
+                  
                 </a>
             </div>
-            <div class="row px-5 pt-5 hover-1">
-                <a href=""><img src="./images/Ex- Tour.png" alt="" style="width: 100%;">
+            <div class="md:px-5 px-3 md:mt-10 content pt-2 hover-1">
+                <div class="content-overlay"></div>
+                <a href="">
+                <img src="./images/Ex- Tour.png" alt="" class="image-bottom object-cover content-image object-right">
+                <div class="content-details fadeIn-left">
                     <p class="img-text-1">Ex-Tour <br><br> <span class="img-text-2">An app for Eco Tourism</span>
                     </p>
+                </div>
+                    
                 </a>
             </div>
-            <div class="row px-5 pt-5 hover-1">
-                <a href=""><img src="./images/Choco Carve.png" alt="" style="width: 100%;">
-                    <p class="img-text-1">Choco Carve <br><br> <span class="img-text-2">Promotion & awareness
+            <div class="md:px-5 px-3 md:mt-10 pt-2 hover-1  content">
+                <div class="content-overlay"></div>
+                <div>
+                    <a href="">
+                        <img src="./images/Choco Carve.png" alt="" class="image-bottom object-cover content-image object-center">
+                       <div class="content-details fadeIn-left">
+                        <p class="img-text-1 relative z-30">Choco Carve <br><br> <span class="img-text-2">Promotion & awareness
                             initiative of
                             <br> Kashmiri Walnut Wood Carving</span>
                     </p>
+                       </div>
+                       
+                    </a>
+                </div>
+               
+            </div>
+            
+        </section>
+<!-- mobile view -->
+        <section  style="margin-top: -3%;" class="md:mx-10 block md:hidden">
+
+            <div class="md:px-5 px-3 md:mt-10 pt-2 hover-1 group relative">
+                <a href="">
+                    
+                    <div class="relative bg-cover bg-center flex justify-start items-end p-2 h-48 md:h-64" style="background-image: url('./images/kashmir-mobile.jpg');">
+                        <div class="absolute inset-0 bg-gradient-to-r from-black via-black to-transparent opacity-50 transition-opacity duration-300 md:hidden"></div>
+                            <div class=" z-10">
+                                <h1 class="text-title text-xl">Lokar</h1>
+                                <div class="text-description text-xs mt-1">An app for awareness and promotion
+                                   <br> of the Deccani Wool</div>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </a>
             </div>
+            <div class="md:px-5 px-3  pt-2 hover-1">
+                <a href="">
+                    
+                    <div class="relative bg-cover bg-center flex justify-start items-end p-2 h-48 md:h-64" style="background-image: url('./images/trekking-mobile.jpg');">
+                        <div class="absolute inset-0 bg-gradient-to-r from-black via-black to-transparent opacity-50 transition-opacity duration-300 md:hidden"></div>
+                            <div class=" z-10">
+                                <h1 class="text-title ">Ex-Tour</h1>
+                                <div class="text-description text-xs mt-1">An app for Eco Tourism
+                                   </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </a>
+            </div>
+            <div class="md:px-5 px-3 md:mt-10 pt-2 hover-1">
+                <a href="">
+                    
+                    <div class="relative bg-cover bg-center flex justify-start items-end p-2 h-48 md:h-64" style="background-image: url('./images/wooden-mobile.jpg');">
+                        <div class="absolute inset-0 bg-gradient-to-r from-black via-black to-transparent opacity-50 transition-opacity duration-300 md:hidden"></div>
+                            <div class=" z-10">
+                                <h1 class="text-title ">Choco Carve</h1>
+                                <div class="text-description text-xs mt-1">Promotion & awareness initiative of 
+                                   <br> Kashmiri Walnut Wood Carving</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </a>
+            </div>
+          
+            
         </section>
-        <section>
+
+
+
+        <section class="md:mx-16 md:my-12 my-10">
             <!-- More Projects button-->
-            <div class=" float-end m-5">
-                <button onclick="w_goto_projects()" style="border: 0px; display: block;">
+            <div class=" float-end ">
+                <button onclick="w_goto_projects()" style="border: 0px; display: block;" class="bg-gray-300 p-2">
                     <!-- <p style="font-size: 1.25rem; margin: 0.5rem 1rem 0.5rem 1rem;">More Projects <img src="images/Rectangle 25.png" style="display: inline;"> </p> -->
-                    <img src="./images/MORE_PROJ_BTN.png" alt="" style="width: 12rem;" class="m-1">
+                    <img src="./images/MORE_PROJ_BTN.png" alt=""  class=" w-40">
                 </button>
             </div>
         </section>
 
 
         <!--FIXED ICONS RIGHT-->
-        <div>
+        <div class="md:block hidden">
             <a href="https://www.linkedin.com/in/atharva-duraphe-961b921b1"><img src="./images/LINKEDIN.png" alt=""
                     style="position: fixed; height: 3rem; width: 3rem; top: 10rem; right: 0.3rem; z-index: 2;"></a>
             <a href="https://www.behance.net/atharvadur6d52"><img src="./images/BEAHNCE.png" alt=""
                     style="position: fixed; height: 3rem; width: 3rem; top: 15rem; right: 0.3rem; z-index: 2;"></a>
             <a href="https://www.instagram.com/atharva_duraphe_10"><img src="./images/INSTA.png" alt=""
                     style="position: fixed; height: 3rem; width: 3rem; top: 20rem; right: 0.3rem; z-index: 2;"></a>
-        </div>
+        </div> 
 
-        <section>
+        <section class="mt-36 footer py-10 md:py-16">
             <!-- FOOTER -->
-            <div>
-                <p class="dull-text fs-5" style="text-align: center; bottom: 0rem; z-index: -1;">
-                    <br><br><br> Atharva Duraphe 2023 All Rights Reserved
+          
+            <div class="flex justify-center items-center align-center pl-10">
+                <a href="https://www.linkedin.com/in/atharva-duraphe-961b921b1/">
+                    <img src="./images/linkedin-footer.png" class="h-50 w-50"/>
+                </a>
+                <a href="https://www.behance.net/atharvadur6d52">
+                    <img src="./images/behance-footer.png" class="h-50 w-50"/>
+                </a>
+                <a href="https://www.instagram.com/atharva_duraphe_10//">
+                    <img src="./images/insta-footer.png" class="h-50 w-50"/>
+                </a>
+
+            </div>
+            <div class="mt-2 md:mt-5">
+                
+                <p  style="text-align: center " >
+                   Atharva Duraphe 2023 All Rights Reserved
                 </p>
             </div>
         </section>

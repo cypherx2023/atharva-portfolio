@@ -89,19 +89,25 @@
             
             animation: translate-4 0.4s ease-in-out 0s backwards;
         }
-
+.ham-menu{
+    position: fixed;
+    top:0;
+    right:0;
+    bottom:0
+}
     </style>
-    <div class="ham-menu" id="mymenu" style="background: #101217; z-index: 10;">
+    <div class="ham-menu" id="mymenu" style="background: #101217; z-index: 300000;">
+
         <img id="menu-1" src="./images/MENU_CONTACT.png" alt="" onclick="w_goto1()"
-            style="position:absolute; right: 4%; z-index: 10; height: 100%; width: 15%;">
+            style="position:absolute;  z-index: 10; height: 15%; width: 100%;">
         <img id="menu-2" src="./images/MENU_BLOG.png" alt="" onclick="w_goto2()"
-            style="position:absolute; right: 19%; z-index: 10; height: 100%; width: 15%;">
+            style="position:absolute; ; z-index: 10; height: 15%; width: 100%;">
         <img id="menu-3" src="./images/MENU_WORK.png" alt="" onclick="w_goto3()"
-            style="position:absolute; right: 34%; z-index: 10; height: 100%; width: 15%;">
+            style="position:absolute;  z-index: 10; height: 15; width:100%;">
         <img id="menu-4" src="./images/MENU_ABOUT.png" alt="" onclick="w_goto4()"
-            style="position:absolute; right: 49%; z-index: 10; height:100%; width: 15%;">
+            style="position:absolute;  z-index: 10; height:15%; width: 100%;">
         <img id="menu-5" src="./images/MENU_CLOSE_2.png" alt="" onclick="w_close()"
-            style="position:absolute; right: 0%; height: 100%; width: 4%; z-index: 10;">
+            style="position:absolute;  height: 100%; width: 100%; z-index: 10;">
     </div>
 
     <script>

@@ -7,14 +7,24 @@
   <title>About</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    @font-face {
-            font-family: "Argesta";
-            src: url("Argesta.woff2") format("woff2"),
-                url("Argesta.woff") format("woff");
-            font-weight: 200;
-            font-style: normal;
-        }
+     @font-face {
+  font-family: 'Argesta';
+  src: url('Fonts/Argesta-Headline.otf') format('opentype');
+     
+  /* You can include more formats here if you have them */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url('Fonts/Satoshi-Bold.otf') format('opentype');
+     
+  /* You can include more formats here if you have them */
+  font-weight: 500;
+  font-style: normal;
+}
 
         @font-face {
             font-family: "Satoshi";
@@ -24,39 +34,53 @@
         }
         @font-face {
             font-family: "Satoshi";
-            src: url("Satoshi-Light.woff2") format("woff2");
-            font-weight: 100;
+            src: url("./Fonts/Satoshi-Light.otf") format("opentype");
+            font-weight: 300;
             font-style: normal;
         }
         
     .orange-text-serif {
-      font-size: 4rem;
+      font-size: 2rem;
       font-family: Argesta, 'Times New Roman', Times, serif;
       color: #F5933E;
-      z-index: 0;
+    
     }
 
     .orange-text-sanserif-2 {
-      font-size: 2rem;
+      font-size: 1rem;
       font-family: Satoshi, Arial, Helvetica, sans-serif;
       color: #F5933E;
       z-index: 0;
-      font-weight: 100;
+      font-weight: 300;
     }
+    @media (min-width:768px) {
+      .orange-text-serif {
+        font-size: 3.5rem;
+      }
+      .orange-text-sanserif-2 {
+        font-size: 2rem;
+      }
+       .dull-text {
+        font-size: 1rem;
+       }
 
+    }
     .white-text-sanserif {
-      font-size: 2rem;
-      font-family: Satoshi, Arial, Helvetica, sans-serif;
-      color: white;
-      z-index: 0;
+      color: var(--pink, #FFE4CC);
+font-family: Satoshi;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
     }
 
     .dull-text {
-      font-size: 1.5rem;
-      font-family: Satoshi, sans-serif, Arial, Helvetica;
-      color: rgba(255, 255, 255, 0.700);
-      z-index: 0;
-      font-weight: 100;
+      color: var(--pink, #FFE4CC);
+font-family: Satoshi;
+font-size: 1rem;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
     }
   </style>
 </head>
@@ -168,180 +192,203 @@
     }
 </style>
 <script src="w_menu.js"></script>
-  <div id="w_main">
+  <div id="w_main" style="display: block;" class="relative">
     <!-- TOP ICONS -->
-    <div class="container-fluid mt-5 my-5 z-n1">
-      <div class="row mt-5">
-        <a class="col" href="./index.html">
-          <img src="./images/LOGO.png" width="109px" height="92px">
-        </a>
-        <a class="col text-end" >
-          <img src="./images/Hamburger.png" width="52px" height="18px" onclick="w_menu()">
-        </a>
+    <div class="absolute top-0 right-0 left-0">
+      <div class="flex justify-between align-center p-3">
+          <a  href="./index.html">
+              <img src="./images/LOGO.png" style="width:7rem; height:5.75rem;">
+          </a>
+          <a class="text-end cursor-pointer">
+              <img src="./images/Hamburger.png" style="width:3.25rem; height:1.13rem;" class="col pe-2"
+                  onclick="w_menu()">
+          </a>
       </div>
+   </div>
+
+   <div class="md:pt-56 pt-44  md:mx-16 px-3">
+    <div class=" orange-text-serif">
+      Atharva Duraphe
     </div>
-    <div class="container">
-      <div class="row mt-5 orange-text-serif">
-        Atharva Duraphe
-      </div>
-      <div class="row orange-text-sanserif-2">
-        I'm a designer with a passion for creating visually captivating and user-centric solutions that merge form and
-        function seamlessly.
-      </div>
+    <div class="orange-text-sanserif-2 md:pr-44">
+      I'm a designer with a passion for creating visually captivating and user-centric solutions that merge form and
+      function seamlessly.
     </div>
+   </div>
+     
+   
     <!-- CONTAINER START -->
-    <div class="container mt-5">
+    
       <!-- ROW 1 -->
-      <div class="row mt-5">
-        <div class="col">
-          <div class="container">
-            <div class="row">
-              <div class="col-2"><img src="./images/BACK SIGN.png" alt="" class="img-fluid"></div>
-              <div class="col-10">
-                <div class="container">
-                  <div class="row white-text-sanserif">How I Entered the World of Design <br></div>
-                  <div class="row dull-text">My inquisitive nature and problem-analyzing attitude drew me into the vast
-                    field of design.</div>
-                </div>
-              </div>
+    
+       <div class="grid grid-cols-2 md:px-16 mx-3">
+        <div class="md:col-span-1 col-span-2  mt-10">
+          <div class="flex justify-start align-center">
+            <div class="w-40"><img src="./images/BACK SIGN.png" alt="" class="h-20 w-20"></div>
+            <div class="">
+            
+                <div class="white-text-sanserif">How I Entered the World of Design </div>
+                <div class=" dull-text">My inquisitive nature and problem-analyzing attitude drew me into the vast
+                  field of design.</div>
+             
             </div>
           </div>
+          
         </div>
-        <div class="col">
-          <div class="container">
-            <div class="row">
-              <div class="col-2"><img src="./images/BACK SIGN.png" alt="" class="img-fluid"></div>
-              <div class="col-10">
-                <div class="container">
-                  <div class="row white-text-sanserif">My Areas of Proficiency <br></div>
-                  <div class="row dull-text">Enhancing User Experience through thoughtful design solutions and craft
-                    visually appealing and user-friendly interface.</div>
-                </div>
+        <div class="md:col-span-1 col-span-2 md:mx-10  mt-10">
+          <div class="flex justify-start align-center">
+            <div  class="w-40"><img src="./images/BACK SIGN.png" alt="" class="h-20 w-20"></div>
+            <div class="md:ml-10 ml-5">
+            
+                <div class="white-text-sanserif">My Areas of Proficiency</div>
+                <div class="dull-text">Enhancing User Experience through thoughtful design solutions and craft
+                  visually appealing and user-friendly interface.</div>
               </div>
-            </div>
           </div>
         </div>
+        </div>
+       </div>
+       <div class="grid grid-cols-2 md:px-16  mx-3">
+        <div class="md:col-span-1 col-span-2  mt-10">
+          <div class="flex justify-start align-center">
+            <div class="w-40"><img src="./images/BACK SIGN.png" alt="" class="h-20 w-20"></div>
+            <div >
+            
+                <div class=" white-text-sanserif">More Than Just a Designer </div>
+                <div class=" dull-text">I am a farmer at core who also finds interest in travel, cricket, and
+                  automobiles.</div>
+             
+                </div>   
       </div>
+     
+        </div>
+       
+        <div class="md:col-span-1 col-span-2 md:mx-10  mt-10">
+          <div class="flex justify-start align-center">
+            <div class="w-40"><img src="./images/BACK SIGN.png" alt="" class="h-20 w-20"></div>
+            <div>
+           
+                <div class="white-text-sanserif">My Goals</div>
+                <div class="dull-text">
+                 
+                    <div>Ace in the field of UX design as well as learn
+                      strategic design deeply.</div>
+                    <div>Work for Rolls Royce.</div>
+                    <div>Learn a Marshal Art.</div>
+                    <div>Own a sports car.</div>
+                
+                
+              </div>
+            </div>
+        </div>
+       </div>
+      </div>
+       
+          
       <!-- ROW 2 -->
-      <div class="row mt-5">
-        <div class="col">
-          <div class="container">
-            <div class="row">
-              <div class="col-2"><img src="./images/BACK SIGN.png" alt="" class="img-fluid"></div>
-              <div class="col-10">
-                <div class="container">
-                  <div class="row white-text-sanserif">More Than Just a Designer <br></div>
-                  <div class="row dull-text">I am a farmer at core who also finds interest in travel, cricket, and
-                    automobiles.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="container">
-            <div class="row">
-              <div class="col-2"><img src="./images/BACK SIGN.png" alt="" class="img-fluid"></div>
-              <div class="col-10">
-                <div class="container">
-                  <div class="row white-text-sanserif">My Goals <br></div>
-                  <div class="row dull-text">
-                    <ul>
-                      <li>Ace in the field of UX design as well as learn
-                        strategic design deeply.</li>
-                      <li>Work for Rolls Royce.</li>
-                      <li>Learn a Marshal Art.</li>
-                      <li>Own a sports car.
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+     
+           
+           
+           
+          
+     
+    
     <!-- CONTAINER END -->
     <!-- WHAT I BELIEVE -->
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col-1"><img src="./images/BACK SIGN.png" alt="" class="img-fluid"></div>
-        <div class="col-11 white-text-sanserif">What I Believe in User Experience Design</div>
+   
+      <div class="flex justify-start align-center md:px-16 mx-3 mt-10">
+        <img src="./images/BACK SIGN.png" alt="" class="h-20 w-20">
+        <div class="md:ml-14">
+          <div class="white-text-sanserif">What I Believe in User Experience Design</div>
+          <div class="dull-text">
+            In user experience design, I believe in the unwavering commitment to creating human-centered digital
+            experiences. My approach is grounded in empathizing with users, understanding their needs, and crafting
+            solutions that not only meet those needs but exceed expectations. I advocate for meticulous research, iterative
+            design, and a seamless blend of functionality and aesthetics. My portfolio showcases projects where I've
+            leveraged these beliefs to deliver intuitive, accessible, and emotionally resonant user experiences. Each design
+            is a testament to my dedication to creating products and interfaces that leave a lasting and positive impact on
+            users.
+          </div>
+        </div>
+      
       </div>
-      <div class="row dull-text mt-4 ms-4">
-        In user experience design, I believe in the unwavering commitment to creating human-centered digital
-        experiences. My approach is grounded in empathizing with users, understanding their needs, and crafting
-        solutions that not only meet those needs but exceed expectations. I advocate for meticulous research, iterative
-        design, and a seamless blend of functionality and aesthetics. My portfolio showcases projects where I've
-        leveraged these beliefs to deliver intuitive, accessible, and emotionally resonant user experiences. Each design
-        is a testament to my dedication to creating products and interfaces that leave a lasting and positive impact on
-        users.
-      </div>
-    </div>
+    
+  
     <!-- RESUME -->
-    <div class="mx-5 mt-5 container-fluid">
-      <img src="./images/RESUME.png" alt="" class="img-fluid px-5"
-        style="position: absolute; z-index: -1; height: 10rem;">
+    <div class="mx-5 mt-5">
+      <img src="./images/RESUME.png" alt="" class="px-5 md:h-40 mt-20" style="margin-bottom: -1rem;"
+        >
     </div>
-    <div class="bg-white container orange-text-sanserif-1" style=" margin-top: 11rem;">
+    <div class="bg-gray-300 orange-text-sanserif-1  md:mx-20  relative" style=" ">
       <a href="https://drive.google.com/uc?export=download&id=1Z1t4vSnHcxz7uayuE-5ZtFwL_Bh_ZclR" style="color: black; text-decoration: none; font-size: 2rem; text-align: center;">
         <p style="font-family: Argesta;" class="pt-3">Download Resume <br> </p>
-        <img src="./images/DOWNLOAD_ICON.png" alt="" style="height: 3rem; width: 3rem; margin-top: -1.5rem;" class="mx-auto d-block mb-5">
+        <img src="./images/DOWNLOAD_ICON.png" alt="" style="height: 3rem; width: 3rem; " class="mx-auto grid  mb-5">
       </a>
     </div>
     <!-- EDUCATION AND WORK EXPERIENCE -->
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col orange-text-serif">Education</div>
-        <div class="col orange-text-serif">Work Experience</div>
-      </div>
-      <div class="row mt-5">
-        <div class="col">
-          <div class="container">
-            <div class="row">
-              <div class="col-2"><img src="./images/BACK SIGN.png" alt="" class="img-fluid"></div>
-              <div class="col-10">
-                <div class="container">
-                  <div class="row white-text-sanserif">Indian Institute of Technology, Roorkee <br></div>
+   
+    
+      <div class=" mt-16">
+       
+          <div class="grid grid-cols-2 md:px-16 mx-3">
+
+          <div class="col-span-2 md:col-span-1 mt-10">
+            <div class="orange-text-serif">Education</div>
+            <div class="flex justify-start align-center">
+              <div><img src="./images/BACK SIGN.png" alt="" class="h-20"></div>
+              <div class="px-5">
+             
+                  <div class="row white-text-sanserif">Indian Institute of Technology, Roorkee </div>
                   <div class="row dull-text">Master’s in Design(2022-2024)</div>
-                </div>
+                
               </div>
-            </div>
+              </div>
           </div>
-        </div>
-
-        <div class="col">
-          <div class="container">
-            <div class="row">
-              <div class="col-2"><img src="./images/BACK SIGN.png" alt="" class="img-fluid"></div>
-              <div class="col-10">
-                <div class="container">
-                  <div class="row white-text-sanserif">Kreo Design and Innovation<br></div>
+             
+          <div class="col-span-2 md:col-span-1 mt-10">
+            <div class="orange-text-serif">Work Experience</div>
+            <div class="flex justify-start align-center">
+              <div ><img src="./images/BACK SIGN.png" alt="" class="h-20 w-20"></div>
+              <div class="px-5">
+              
+                  <div class="row white-text-sanserif">Kreo Design and Innovation</div>
                   <div class="row dull-text">UI/UX Intern 22 May’23 - 21 July’23</div>
-                </div>
+              
               </div>
             </div>
-          </div>
-        </div>
+             </div>
+           
+            
+               
+            
+           
+            </div>
+       
+           
 
-      </div>
-    </div>
+      
+       
+           
+       
+
+   
+   
 
     <!-- SKILLS -->
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col orange-text-serif">Skills</div>
-      </div>
+    <div class=" mt-16">
+      
+        <div class="orange-text-serif md:px-16 mx-3">Skills</div>
+      
       <!-- COL 1 -->
-      <div class="row mt-5">
-        <div class="col">
-          <div class="container">
-            <div class="row">
-              <div class="col-3"><img src="./images/BACK SIGN.png" alt="" class="img-fluid"></div>
-              <div class="col-9">
-                <div class="container">
-                  <div class="row white-text-sanserif">User Experience <br></div>
-                  <div class="row dull-text">
+      <div class="grid grid-cols-3 md:px-16 mx-3">
+        <div class="md:col-span-1 col-span-3 mt-10">
+         
+            <div class="flex justify-start align-center">
+              <div ><img src="./images/BACK SIGN.png" alt="" class="h-20 w-20"></div>
+              <div >
+                <div class=" mx-5">
+                  <div class=" white-text-sanserif">User Experience <br></div>
+                  <div class=" dull-text">
                     User/Product Research<br>
                     Competitor analysis<br>
                     User Personas<br>
@@ -353,18 +400,18 @@
                   </div>
                 </div>
               </div>
-            </div>
+          
           </div>
         </div>
         <!-- COL 2 -->
-        <div class="col">
-          <div class="container">
-            <div class="row">
-              <div class="col-3"><img src="./images/BACK SIGN.png" alt="" class="img-fluid"></div>
-              <div class="col-9">
-                <div class="container">
-                  <div class="row white-text-sanserif">User Interface<br></div>
-                  <div class="row dull-text">
+        <div class="md:col-span-1 col-span-3 mt-10">
+        
+            <div class="flex justify-start align-center">
+              <div ><img src="./images/BACK SIGN.png" alt="" class="w-20 h-20"></div>
+              <div >
+                <div  class=" mx-5">
+                  <div class=" white-text-sanserif">User Interface<br></div>
+                  <div class=" dull-text">
                     Navigation patterns<br>
                     Wireframing<br>
                     Design library<br>
@@ -376,17 +423,17 @@
                 </div>
               </div>
             </div>
-          </div>
+         
         </div>
         <!-- COL 3 -->
-        <div class="col">
-          <div class="container">
-            <div class="row">
-              <div class="col-3"><img src="./images/BACK SIGN.png" alt="" class="img-fluid"></div>
-              <div class="col-9">
-                <div class="container">
-                  <div class="row white-text-sanserif">Soft Skills<br></div>
-                  <div class="row dull-text">
+        <div  class="md:col-span-1 col-span-3 mt-10">
+         
+            <div class="flex justify-start align-center">
+              <div ><img src="./images/BACK SIGN.png" alt="" class="w-20 h-20"></div>
+              <div >
+                <div class=" mx-5">
+                  <div class="white-text-sanserif">Soft Skills<br></div>
+                  <div class=" dull-text">
                     User Interviews<br>
                     Presentation<br>
                     Documentation<br>
@@ -397,7 +444,7 @@
               </div>
             </div>
           </div>
-        </div>
+       
 
       </div>
     </div>
@@ -405,7 +452,7 @@
     <!-- ACHIVEMENTS -->
     <div class="container mt-5">
       <div class="row">
-        <div class="col orange-text-serif">Education</div>
+        <div class="col orange-text-serif">Achivements</div>
       </div>
       <div class="row mt-5">
         <div class="col">
@@ -437,7 +484,7 @@
       </p>
     </div>
     <!--FIXED ICONS RIGHT-->
-    <div>
+    <div class="md:block hidden">
       <a href="https://www.linkedin.com/in/atharva-duraphe-961b921b1"><img src="./images/LINKEDIN.png" alt=""
               style="position: fixed; height: 3rem; width: 3rem; top: 10rem; right: 0.3rem; z-index: 2;"></a>
       <a href="https://www.behance.net/atharvadur6d52"><img src="./images/BEAHNCE.png" alt=""
