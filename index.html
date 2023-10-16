@@ -89,7 +89,7 @@ z-index: 0;
         }
 
         .white-text-sanserif {
-          
+            font-size: 20px;
             font-family: Satoshi, Roboto, sans-serif;
             text-align: justify; 
             z-index: 0;
@@ -116,7 +116,7 @@ z-index: 0;
   white-space: nowrap;
   display: inline-block;
   position: relative;
-  animation-duration: 20s;
+  animation-duration: 10s;
   animation-timing-function: steps(25, end);
   animation-iteration-count: infinite;
   color: var(--orange, #F5933E);
@@ -128,7 +128,7 @@ line-height: normal;
 }
 
 .text_1::after, .text_2::after {
-  content: "|";
+  content: "";
   position: absolute;
   right: 0;
   animation: caret infinite;
@@ -216,11 +216,39 @@ font-style: normal;
 font-weight: 300;
 line-height: normal;
        }
-        @media (min-width:768px) {
-            .name-text{
-    margin-top: -5rem;
-margin-left: 2rem;
-text-align: left;
+
+.mobile-menu {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%; /* Make the mobile menu take the full width of the screen */
+    height: 100%; /* Make the mobile menu take the full height of the screen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-menu .menu-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-menu .menu-item img {
+    max-width: 100%; /* Ensure the images don't exceed the width of their container */
+    height: auto;
+}
+
+/* Mobile styling for MENU items */
+@media (min-width:768px) {
+    .name-text{
+        margin-top: -5rem;
+        margin-left: 2rem;
+        text-align: left;
 
 }
 .text_1, .text_2 {
@@ -369,7 +397,7 @@ body{
 
 <body style="background-color: #101217;">
     <!-- MENU -->
-    <div class="ham-menu" id="w_menu" style="background: #101217; z-index: 10; display: none;">
+    <div class="ham-menu hidden " id="w_menu" style="background: #101217; z-index: 10">
         <img id="menu-1" src="./images/MENU_CONTACT.png" alt="" onclick="w_goto1()"
             style="position:absolute; right: 4%; z-index: 10; height: 100%; width: 15%;">
         <img id="menu-2" src="./images/MENU_BLOG.png" alt="" onclick="w_goto2()"
@@ -381,6 +409,38 @@ body{
         <img id="menu-5" src="./images/MENU_CLOSE_2.png" alt="" onclick="w_close()"
             style="position:absolute; right: 0%; height: 100%; width: 4%; z-index: 10;">
     </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu md:hidden hidden" style="background: #101217;">
+        <div style="float:right;" onclick="closeMobileMenu()">
+            <img src="./images/Group 282.png" alt="">
+        </div>
+        <br>
+        <div class="menu-item" style="width:auto;margin:auto auto" onclick="w_goto4()">
+            <div style="position: relative;">
+            <img src="./images/PROJECTS.png" class="img-fluid" alt="">
+            <p class="text" style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); color: #FFE4CC; font-size: 20px;">ABOUT</p>
+        </div>
+        </div>
+        <div class="menu-item" onclick="w_goto3()">
+            <div style="position: relative;">
+            <img src="./images/Rectangle 19.png" class="img-fluid" alt="">
+            <p class="text" style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); color: #FFE4CC; font-size: 20px;">WORK</p>
+        </div>
+        </div>
+        <div class="menu-item" onclick="w_goto2()">
+            <div style="position: relative;">
+            <img src="./images/Rectangle 20.png" class="img-fluid" alt="">
+            <p class="text" style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); color: #FFE4CC; font-size: 20px;">BLOG</p>
+        </div>
+        </div>
+        <div class="menu-item" onclick="w_goto1()">
+            <div style="position: relative;">
+            <img src="./images/Rectangle 21.png" class="img-fluid" alt="">
+            <p class="text" style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); color: #FFE4CC; font-size: 20px;">CONTACT</p>
+        </div>
+        </div>
+    </div>
+
     <style>
         @keyframes translate {
             0% {
@@ -481,9 +541,8 @@ body{
                 <a  href="./index.html">
                     <img src="./images/LOGO.png" style="width:7rem; height:5.75rem;">
                 </a>
-                <a class="text-end cursor-pointer">
-                    <img src="./images/Hamburger.png" style="width:3.25rem; height:1.13rem;" class="col pe-2"
-                        onclick="w_menu()">
+                <a class="text-end cursor-pointer p-3" id="menu-button">
+                    <img src="./images/Hamburger.png" style="width:4.25rem; height:2.13rem;"  class="col pe-2">
                 </a>
             </div>
         </div>
@@ -510,7 +569,7 @@ body{
                     </div>
                 </div>
                 <!-- PHOTO 1 -->
-                <div class=" back-sign mt-20  ml-16 md:ml-1">
+                <div class=" back-sign mt-10 ml-16 md:ml-1">
                     <img src="./images/Group 276.png" alt="" class="img-cover">
                 </div>
             </div>
@@ -527,9 +586,6 @@ body{
                     <h1><span class="text_1">Namskar...!</span>
                         <span class="text_2">Hello...!</span>
                     </h1>
-                    
-                        
-    
                         <p class="white-text-sanserif "
                            >
                             I am a passionate and imaginative designer specializing in the captivating realms of UX and UI
@@ -544,7 +600,6 @@ body{
                             leave a lasting impression.
                         </p>
                 </div>
-              
                 </div>
             </div>
         </section>
@@ -671,7 +726,7 @@ body{
                     style="position: fixed; height: 3rem; width: 3rem; top: 20rem; right: 0.3rem; z-index: 2;"></a>
         </div> 
 
-        <section class="mt-36 footer py-10 md:py-16">
+        <section class="mt-36 footer py-10 md:py-16 md:hidden">
             <!-- FOOTER -->
           
             <div class="flex justify-center items-center align-center pl-10">
@@ -687,12 +742,17 @@ body{
 
             </div>
             <div class="mt-2 md:mt-5">
-                
-                <p  style="text-align: center " >
+                <p style="text-align: center">
                    Atharva Duraphe 2023 All Rights Reserved
                 </p>
             </div>
         </section>
+        <div class="mt-2 md:pt-20 md:block hidden">
+          
+            <p  style="text-align: center;color: #FFE4CC" >
+               Atharva Duraphe 2023 All Rights Reserved
+            </p>
+        </div>
 
     </div>
 
@@ -706,7 +766,25 @@ body{
     </script>
     <script src="./w_menu.js"></script>
     <script>
-        
+        document.getElementById('menu-button').addEventListener('click', function () {
+    if (window.innerWidth >= 768) {
+        // If screen width is 768px or larger (desktop), call w_menu()
+        w_menu();
+    } else {
+        // If screen width is less than 768px (mobile), toggle the mobile menu
+        var mobileMenu = document.querySelector('.mobile-menu');
+        mobileMenu.style.display = mobileMenu.style.display === 'none' ? 'block' : 'none';
+    }
+});
+
+    </script>
+    <script>
+        function closeMobileMenu() {
+    var mobileMenu = document.querySelector('.mobile-menu');
+    mobileMenu.style.display = 'none';
+    document.body.classList.remove("menu-open");
+}
+
     </script>
 </body>
 

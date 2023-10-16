@@ -24,6 +24,39 @@
         <img id="menu-5" src="./images/MENU_CLOSE_2.png" alt="" onclick="w_close()"
             style="position:absolute; right: 0%; height: 100%; width: 4%; z-index: 10;">
     </div>
+    
+        <!-- Mobile Menu -->
+    <div class="mobile-menu md:hidden hidden absolute top:0 left:0 right:0" style="background: #101217; ">
+        <div style="float:right;" onclick="closeMobileMenu()">
+            <img src="./images/Group 282.png" alt="">
+        </div>
+        <br>
+        <div class="menu-item" style="width:auto;margin:auto auto" onclick="w_goto4()">
+            <div style="position: relative;">
+            <img src="./images/PROJECTS.png" class="img-fluid" alt="">
+            <p class="text" style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); color: #FFE4CC; font-size: 20px;">ABOUT</p>
+        </div>
+        </div>
+        <div class="menu-item" onclick="w_goto3()">
+            <div style="position: relative;">
+            <img src="./images/Rectangle 19.png" class="img-fluid" alt="">
+            <p class="text" style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); color: #FFE4CC; font-size: 20px;">WORK</p>
+        </div>
+        </div>
+        <div class="menu-item" onclick="w_goto2()">
+            <div style="position: relative;">
+            <img src="./images/Rectangle 20.png" class="img-fluid" alt="">
+            <p class="text" style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); color: #FFE4CC; font-size: 20px;">BLOG</p>
+        </div>
+        </div>
+        <div class="menu-item" onclick="w_goto1()">
+             <div style="position: relative;">
+             
+            <img src="./images/Rectangle 21.png" class="img-fluid" alt="">
+            <p class="text" style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); color: #FFE4CC; font-size: 20px;">CONTACT</p>
+        </div>
+        </div>
+    </div>
     <style>
         @keyframes translate {
             0% {
@@ -124,18 +157,37 @@ font-style: normal;
 font-weight: 300;
 line-height: normal;
        }
+       .mobile-menu {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.mobile-menu .menu-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-menu .menu-item img {
+    max-width: 100%; /* Ensure the images don't exceed the width of their container */
+    height: auto;
+}
     </style>
-    <script src="./w_menu.js"></script>
+    
     <div id="w_main relative">
+        <script src="./w_menu.js"></script>
         <!-- TOP ICONS -->
         <div class="absolute top-0 right-0 left-0">
             <div class="flex justify-between align-center p-3">
                 <a  href="./index.html">
-                    <img src="./images/LOGO.png" style="width:7rem; height:5.75rem;">
+                    <img src="./images/LOGO.png" class="h-auto w-16 md:w-24">
                 </a>
-                <a class="text-end cursor-pointer">
-                    <img src="./images/Hamburger.png" style="width:3.25rem; height:1.13rem;" class="col pe-2"
-                        onclick="w_menu()">
+                <a class="text-end cursor-pointer p-3" id="menu-button">
+                    <img src="./images/Hamburger.png"  class="h-auto w-16 md:w-24">
                 </a>
             </div>
         </div>
@@ -174,8 +226,7 @@ line-height: normal;
                 </a>
 
             </div>
-            <div class="mt-2 md:mt-5">
-                
+            <div class="mt-2 md:mt-5">  
                 <p  style="text-align: center " >
                    Atharva Duraphe 2023 All Rights Reserved
                 </p>
@@ -183,8 +234,7 @@ line-height: normal;
         </section>
         </div>
         <div class="mt-2 md:pt-20 md:block hidden">
-          
-            <p  style="text-align: center " >
+            <p  style="text-align: center;color: #FFE4CC" >
                Atharva Duraphe 2023 All Rights Reserved
             </p>
         </div>
@@ -202,6 +252,27 @@ line-height: normal;
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+    <script>
+        document.getElementById('menu-button').addEventListener('click', function () {
+    if (window.innerWidth >= 768) {
+        // If screen width is 768px or larger (desktop), call w_menu()
+        w_menu();
+    } else {
+        // If screen width is less than 768px (mobile), toggle the mobile menu
+        var mobileMenu = document.querySelector('.mobile-menu');
+        mobileMenu.style.display = mobileMenu.style.display === 'none' ? 'block' : 'none';
+    }
+});
+
+    </script>
+    <script>
+        function closeMobileMenu() {
+    var mobileMenu = document.querySelector('.mobile-menu');
+    mobileMenu.style.display = 'none';
+    document.body.classList.remove("menu-open");
+}
+
+    </script>
 </body>
 
 </html>

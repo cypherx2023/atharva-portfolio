@@ -32,14 +32,12 @@
             font-style: normal;
         }
     .img-text-1 {
-      
-     
+
         font-family: Argesta, "Playfair Display", serif;
         font-size: 1.5rem;
         color: white;
       
         font-weight: 100;
-
     }
 
     .img-text-2 {
@@ -101,7 +99,6 @@
       /* Text styles */
       color: white;
       font-size: 24px;
-     
     }
     
     @media (min-width:768px) {
@@ -116,7 +113,31 @@
             height:450px !important;
           }
     }
+    .mobile-menu {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%; /* Make the mobile menu take the full width of the screen */
+    height: 100%; /* Make the mobile menu take the full height of the screen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
+.mobile-menu .menu-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-menu .menu-item img {
+    max-width: 100%; /* Ensure the images don't exceed the width of their container */
+    height: auto;
+}
 </style>
 
 <body style="background-color: #101217;">
@@ -132,6 +153,37 @@
             style="position:absolute; right: 49%; z-index: 10; height:100%; width: 15%;">
         <img id="menu-5" src="./images/MENU_CLOSE_2.png" alt="" onclick="w_close()"
             style="position:absolute; right: 0%; height: 100%; width: 4%; z-index: 10;">
+    </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu md:hidden hidden" style="background: #101217;">
+        <div style="float:right;" onclick="closeMobileMenu()">
+            <img src="./images/Group 282.png" alt="">
+        </div>
+        <br>
+        <div class="menu-item" style="width:auto;margin:auto auto" onclick="w_goto4()">
+            <div style="position: relative;">
+            <img src="./images/PROJECTS.png" class="img-fluid" alt="">
+            <p class="text" style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); color: #FFE4CC; font-size: 20px;">ABOUT</p>
+        </div>
+        </div>
+        <div class="menu-item" onclick="w_goto3()">
+            <div style="position: relative;">
+            <img src="./images/Rectangle 19.png" class="img-fluid" alt="">
+            <p class="text" style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); color: #FFE4CC; font-size: 20px;">WORK</p>
+        </div>
+        </div>
+        <div class="menu-item" onclick="w_goto2()">
+            <div style="position: relative;">
+            <img src="./images/Rectangle 20.png" class="img-fluid" alt="">
+            <p class="text" style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); color: #FFE4CC; font-size: 20px;">BLOG</p>
+        </div>
+        </div>
+        <div class="menu-item" onclick="w_goto1()">
+            <div style="position: relative;">
+            <img src="./images/Rectangle 21.png" class="img-fluid" alt="">
+            <p class="text" style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); color: #FFE4CC; font-size: 20px;">CONTACT</p>
+        </div>
+        </div>
     </div>
     <style>
         @keyframes translate {
@@ -230,11 +282,10 @@
         <div class="absolute top-0 right-0 left-0">
             <div class="flex justify-between align-center p-3">
                 <a  href="./index.html">
-                    <img src="./images/LOGO.png" style="width:7rem; height:5.75rem;">
+                    <img src="./images/LOGO.png" class="h-auto w-16 md:w-24">
                 </a>
-                <a class="text-end cursor-pointer">
-                    <img src="./images/Hamburger.png" style="width:3.25rem; height:1.13rem;" class="col pe-2"
-                        onclick="w_menu()">
+                <a class="text-end cursor-pointer p-3" id="menu-button">
+                    <img src="./images/Hamburger.png"  class="h-auto w-16 md:w-24">
                 </a>
             </div>
         </div>
@@ -245,13 +296,14 @@
         <div  style="margin-top: -4rem;" class="pt-16 md:pt-0">
             <div class="row mx-3 justify-content-center align-center md:pr-16">
                 <div class="col-md-6 col-12 my-2" >
-                    <div class="background-container w-full h-full first p-5 " >
+                 
+                    <div class="background-container w-full h-full first p-5">
                         <a href="https://drive.google.com/file/d/1-R8F8n7aUyf8Srpi8Y79C0wHxS7sax8P/view">
                             <div class="img-text-1">Ex-Tour </div>
-                      <div class="img-text-2">An app for Eco Tourism</div>
-                           
-                        </a>
+                            <div class="img-text-2">An app for Eco Tourism</div>
+                            <br>
                     </div>
+                    </a>
                    </div>
                 <div class="col-md-6 col-12  my-2">
                     <div class="background-container w-full h-full second p-5" >
@@ -297,7 +349,7 @@
                 <div class="col-md-6 col-12  my-2">
                     <div class="background-container w-full h-full sixth p-5">
                         <a href="https://www.behance.net/gallery/164429303/Kaarigar-An-art-exploration">
-                        <div class="img-text-1">Karigar </div> <div class="img-text-2">Coffee Table Book</div>
+                        <div class="img-text-1">Karigar </div> <div class="img-text-2">Coffee Table Book</div><br>
                     </a>
                     </div>
                  </div>
@@ -315,16 +367,39 @@
                     <div class="background-container w-full h-full eighth p-5">
                         <a href="https://drive.google.com/file/d/10Gw_ebklN-sv3WoDpapIoePffJWVVZlR/view">
                             <div class="img-text-1">UI Elements </div> <div class="img-text-2">User Interface Elements
-                                    Design</div>
+                                    Design</div>  <br>
+                                  
                         </a>
                     </div>
                   </div>
             </div>
         </div>
         <!-- FOOTER -->
-        <div>
-            <p class="dull-text fs-5 mt-10" style="text-align: center;">
-                Atharva Duraphe 2023 All Rights Reserved
+        <section class="mt-36 footer py-10 md:py-16 md:hidden block" style="background: #FFE4CC;">
+            <!-- FOOTER -->
+          
+            <div class="flex justify-center items-center align-center pl-10">
+                <a href="https://www.linkedin.com/in/atharva-duraphe-961b921b1/">
+                    <img src="./images/linkedin-footer.png" class="h-50 w-50"/>
+                </a>
+                <a href="https://www.behance.net/atharvadur6d52">
+                    <img src="./images/behance-footer.png" class="h-50 w-50"/>
+                </a>
+                <a href="https://www.instagram.com/atharva_duraphe_10//">
+                    <img src="./images/insta-footer.png" class="h-50 w-50"/>
+                </a>
+
+            </div>
+            <div class="mt-2 md:mt-5">  
+                <p  style="text-align: center " >
+                   Atharva Duraphe 2023 All Rights Reserved
+                </p>
+            </div>
+        </section>
+        </div>
+        <div class="mt-2 md:pt-20 md:block hidden">
+            <p  style="text-align: center;color: #FFE4CC" >
+               Atharva Duraphe 2023 All Rights Reserved
             </p>
         </div>
 
@@ -364,6 +439,27 @@
         }
     </script>
     <script src="./w_menu.js"></script>
+    <script>
+        document.getElementById('menu-button').addEventListener('click', function () {
+    if (window.innerWidth >= 768) {
+        // If screen width is 768px or larger (desktop), call w_menu()
+        w_menu();
+    } else {
+        // If screen width is less than 768px (mobile), toggle the mobile menu
+        var mobileMenu = document.querySelector('.mobile-menu');
+        mobileMenu.style.display = mobileMenu.style.display === 'none' ? 'block' : 'none';
+    }
+});
+
+    </script>
+    <script>
+        function closeMobileMenu() {
+    var mobileMenu = document.querySelector('.mobile-menu');
+    mobileMenu.style.display = 'none';
+    document.body.classList.remove("menu-open");
+}
+
+    </script>
 </body>
 
 </html>

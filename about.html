@@ -82,6 +82,31 @@ font-style: normal;
 font-weight: 300;
 line-height: normal;
     }
+    .mobile-menu {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%; /* Make the mobile menu take the full width of the screen */
+    height: 100%; /* Make the mobile menu take the full height of the screen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-menu .menu-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-menu .menu-item img {
+    max-width: 100%; /* Ensure the images don't exceed the width of their container */
+    height: auto;
+}
   </style>
 </head>
 
@@ -99,6 +124,38 @@ line-height: normal;
     <img id="menu-5" src="./images/MENU_CLOSE_2.png" alt="" onclick="w_close()"
         style="position:absolute; right: 0%; height: 100%; width: 4%; z-index: 10;">
 </div>
+
+<!-- Mobile Menu -->
+    <div class="mobile-menu md:hidden hidden" style="background: #101217;">
+        <div style="float:right;" onclick="closeMobileMenu()">
+            <img src="./images/Group 282.png" alt="">
+        </div>
+        <br>
+        <div class="menu-item" style="width:auto;margin:auto auto" onclick="w_goto4()">
+            <div style="position: relative;">
+            <img src="./images/PROJECTS.png" class="img-fluid" alt="">
+            <p class="text" style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); color: #FFE4CC; font-size: 20px;">ABOUT</p>
+        </div>
+        </div>
+        <div class="menu-item" onclick="w_goto3()">
+            <div style="position: relative;">
+            <img src="./images/Rectangle 19.png" class="img-fluid" alt="">
+            <p class="text" style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); color: #FFE4CC; font-size: 20px;">WORK</p>
+        </div>
+        </div>
+        <div class="menu-item" onclick="w_goto2()">
+            <div style="position: relative;">
+            <img src="./images/Rectangle 20.png" class="img-fluid" alt="">
+            <p class="text" style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); color: #FFE4CC; font-size: 20px;">BLOG</p>
+        </div>
+        </div>
+        <div class="menu-item" onclick="w_goto1()">
+            <div style="position: relative;">
+            <img src="./images/Rectangle 21.png" class="img-fluid" alt="">
+            <p class="text" style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); color: #FFE4CC; font-size: 20px;">CONTACT</p>
+        </div>
+        </div>
+    </div>
 <style>
     @keyframes translate {
         0% {
@@ -192,21 +249,20 @@ line-height: normal;
     }
 </style>
 <script src="w_menu.js"></script>
-  <div id="w_main" style="display: block;" class="relative">
+  <div id="w_main" style="display: block;" class="relative ">
     <!-- TOP ICONS -->
     <div class="absolute top-0 right-0 left-0">
       <div class="flex justify-between align-center p-3">
           <a  href="./index.html">
-              <img src="./images/LOGO.png" style="width:7rem; height:5.75rem;">
+              <img src="./images/LOGO.png"  class="h-auto w-16 md:w-24">
           </a>
-          <a class="text-end cursor-pointer">
-              <img src="./images/Hamburger.png" style="width:3.25rem; height:1.13rem;" class="col pe-2"
-                  onclick="w_menu()">
+          <a class="text-end cursor-pointer p-3" id="menu-button">
+              <img src="./images/Hamburger.png" class="h-auto w-12 md:w-24 pr-2" >
           </a>
       </div>
    </div>
 
-   <div class="md:pt-56 pt-44  md:mx-16 px-3">
+   <div class="md:pt-52 pt-32  md:mx-16 px-3">
     <div class=" orange-text-serif">
       Atharva Duraphe
     </div>
@@ -220,42 +276,44 @@ line-height: normal;
     <!-- CONTAINER START -->
     
       <!-- ROW 1 -->
-    
-       <div class="grid grid-cols-2 md:px-16 mx-3">
-        <div class="md:col-span-1 col-span-2  mt-10">
+    <div class="grid grid-cols-2 md:pl-12 md:pr-20">
+       <!-- <div class="grid grid-cols-2 grid-rows-2 md:px-10 mx-3 gap-5"> -->
+       
+        <div class="md:col-span-1 col-span-2 md:row-span-1  mt-10  md:px-5 px-3">
           <div class="flex justify-start align-center">
-            <div class="w-40"><img src="./images/BACK SIGN.png" alt="" class="h-20 w-20"></div>
-            <div class="">
+            <div class="md:w-32 w-36"><img src="./images/BACK SIGN.png" alt="" class="h-20 w-20"></div>
+            <div class="mt-4 ml-4"> 
             
                 <div class="white-text-sanserif">How I Entered the World of Design </div>
-                <div class=" dull-text">My inquisitive nature and problem-analyzing attitude drew me into the vast
+                <div class=" dull-text  mt-3 ml-1">My inquisitive nature and problem-analyzing attitude drew me into the vast
                   field of design.</div>
              
             </div>
           </div>
           
         </div>
-        <div class="md:col-span-1 col-span-2 md:mx-10  mt-10">
+        <div class="md:col-span-1 col-span-2  mt-10 md:px-5 px-3">
           <div class="flex justify-start align-center">
-            <div  class="w-40"><img src="./images/BACK SIGN.png" alt="" class="h-20 w-20"></div>
-            <div class="md:ml-10 ml-5">
+            <div class="md:w-32 w-36"><img src="./images/BACK SIGN.png" alt="" class="h-20 w-20"></div>
+            <div  class="mt-4 ml-4">
             
                 <div class="white-text-sanserif">My Areas of Proficiency</div>
-                <div class="dull-text">Enhancing User Experience through thoughtful design solutions and craft
+                <div class="dull-text  mt-3 ml-1">Enhancing User Experience through thoughtful design solutions and craft
                   visually appealing and user-friendly interface.</div>
               </div>
           </div>
         </div>
-        </div>
-       </div>
-       <div class="grid grid-cols-2 md:px-16  mx-3">
-        <div class="md:col-span-1 col-span-2  mt-10">
+        
+       <!-- </div> -->
+       <!-- <div class="grid grid-cols-2 md:px-16 mx-3 gap-5"> -->
+        <div class="md:col-span-1 col-span-2 mt-10 md:px-5 px-3">
           <div class="flex justify-start align-center">
-            <div class="w-40"><img src="./images/BACK SIGN.png" alt="" class="h-20 w-20"></div>
-            <div >
+            <div class="md:w-32 w-36"><img src="./images/BACK SIGN.png" alt="" class="h-20 w-20"></div>
+          
+            <div class="mt-4 ml-4">
             
-                <div class=" white-text-sanserif">More Than Just a Designer </div>
-                <div class=" dull-text">I am a farmer at core who also finds interest in travel, cricket, and
+                <div class="white-text-sanserif">More Than Just a Designer </div>
+                <div class="dull-text  mt-3 ml-1">I am a farmer at core who also finds interest in travel, cricket, and
                   automobiles.</div>
              
                 </div>   
@@ -263,23 +321,26 @@ line-height: normal;
      
         </div>
        
-        <div class="md:col-span-1 col-span-2 md:mx-10  mt-10">
+        <div class="md:col-span-1 col-span-2 mt-10  md:px-5 px-3 ">
           <div class="flex justify-start align-center">
-            <div class="w-40"><img src="./images/BACK SIGN.png" alt="" class="h-20 w-20"></div>
-            <div>
+            <div class="md:w-32 w-36"><img src="./images/BACK SIGN.png" alt="" class="h-20 w-20"></div>
+           
+              <div class="mt-4 ml-4">
            
                 <div class="white-text-sanserif">My Goals</div>
-                <div class="dull-text">
+                <ul class="dull-text list-disc mt-3">
                  
-                    <div>Ace in the field of UX design as well as learn
-                      strategic design deeply.</div>
-                    <div>Work for Rolls Royce.</div>
-                    <div>Learn a Marshal Art.</div>
-                    <div>Own a sports car.</div>
+                    <li>Ace in the field of UX design as well as learn
+                      strategic design deeply.</li>
+                    <li>Work for Rolls Royce.</li>
+                    <li>Learn a Marshal Art.</li>
+                    <li>Own a sports car.</li>
                 
                 
+                    </ul>
+               
               </div>
-            </div>
+          
         </div>
        </div>
       </div>
@@ -298,7 +359,7 @@ line-height: normal;
    
       <div class="flex justify-start align-center md:px-16 mx-3 mt-10">
         <img src="./images/BACK SIGN.png" alt="" class="h-20 w-20">
-        <div class="md:ml-14">
+        <div class="md:ml-12 ml-4">
           <div class="white-text-sanserif">What I Believe in User Experience Design</div>
           <div class="dull-text">
             In user experience design, I believe in the unwavering commitment to creating human-centered digital
@@ -316,13 +377,13 @@ line-height: normal;
   
     <!-- RESUME -->
     <div class="mx-5 mt-5">
-      <img src="./images/RESUME.png" alt="" class="px-5 md:h-40 mt-20" style="margin-bottom: -1rem;"
+      <img src="./images/RESUME.png" alt="" class="px-5 mt-20 " style="margin-bottom: -1rem;"
         >
     </div>
-    <div class="bg-gray-300 orange-text-sanserif-1  md:mx-20  relative" style=" ">
+    <div class="bg-gray-300 orange-text-sanserif-1  md:mx-20  relative" style="padding: 0.1rem;">
       <a href="https://drive.google.com/uc?export=download&id=1Z1t4vSnHcxz7uayuE-5ZtFwL_Bh_ZclR" style="color: black; text-decoration: none; font-size: 2rem; text-align: center;">
         <p style="font-family: Argesta;" class="pt-3">Download Resume <br> </p>
-        <img src="./images/DOWNLOAD_ICON.png" alt="" style="height: 3rem; width: 3rem; " class="mx-auto grid  mb-5">
+        <img src="./images/DOWNLOAD_ICON.png" alt="" style="height: 3rem; width: 3rem;" class="mx-auto grid mb-3">
       </a>
     </div>
     <!-- EDUCATION AND WORK EXPERIENCE -->
@@ -330,13 +391,13 @@ line-height: normal;
     
       <div class=" mt-16">
        
-          <div class="grid grid-cols-2 md:px-16 mx-3">
+          <div class="grid grid-cols-2 md:px-16 mx-3 ">
 
           <div class="col-span-2 md:col-span-1 mt-10">
-            <div class="orange-text-serif">Education</div>
-            <div class="flex justify-start align-center">
+            <div class="orange-text-serif md:ml-10">Education</div>
+            <div class="flex justify-start align-center mt-5">
               <div><img src="./images/BACK SIGN.png" alt="" class="h-20"></div>
-              <div class="px-5">
+              <div class="md:px-5 px-3">
              
                   <div class="row white-text-sanserif">Indian Institute of Technology, Roorkee </div>
                   <div class="row dull-text">Master’s in Design(2022-2024)</div>
@@ -346,10 +407,10 @@ line-height: normal;
           </div>
              
           <div class="col-span-2 md:col-span-1 mt-10">
-            <div class="orange-text-serif">Work Experience</div>
-            <div class="flex justify-start align-center">
+            <div class="orange-text-serif md:ml-10">Work Experience</div>
+            <div class="flex justify-start align-center mt-5">
               <div ><img src="./images/BACK SIGN.png" alt="" class="h-20 w-20"></div>
-              <div class="px-5">
+              <div class="md:px-5 px-3">
               
                   <div class="row white-text-sanserif">Kreo Design and Innovation</div>
                   <div class="row dull-text">UI/UX Intern 22 May’23 - 21 July’23</div>
@@ -377,16 +438,16 @@ line-height: normal;
     <!-- SKILLS -->
     <div class=" mt-16">
       
-        <div class="orange-text-serif md:px-16 mx-3">Skills</div>
+        <div class="orange-text-serif md:px-28 mx-3">Skills</div>
       
       <!-- COL 1 -->
       <div class="grid grid-cols-3 md:px-16 mx-3">
-        <div class="md:col-span-1 col-span-3 mt-10">
+        <div class="md:col-span-1 col-span-3 ">
          
             <div class="flex justify-start align-center">
               <div ><img src="./images/BACK SIGN.png" alt="" class="h-20 w-20"></div>
               <div >
-                <div class=" mx-5">
+                <div class=" mx-5 mt-4">
                   <div class=" white-text-sanserif">User Experience <br></div>
                   <div class=" dull-text">
                     User/Product Research<br>
@@ -404,12 +465,12 @@ line-height: normal;
           </div>
         </div>
         <!-- COL 2 -->
-        <div class="md:col-span-1 col-span-3 mt-10">
+        <div class="md:col-span-1 col-span-3 ">
         
             <div class="flex justify-start align-center">
               <div ><img src="./images/BACK SIGN.png" alt="" class="w-20 h-20"></div>
               <div >
-                <div  class=" mx-5">
+                <div  class=" mx-5  mt-4">
                   <div class=" white-text-sanserif">User Interface<br></div>
                   <div class=" dull-text">
                     Navigation patterns<br>
@@ -426,12 +487,12 @@ line-height: normal;
          
         </div>
         <!-- COL 3 -->
-        <div  class="md:col-span-1 col-span-3 mt-10">
+        <div  class="md:col-span-1 col-span-3 ">
          
             <div class="flex justify-start align-center">
               <div ><img src="./images/BACK SIGN.png" alt="" class="w-20 h-20"></div>
               <div >
-                <div class=" mx-5">
+                <div class=" mx-5  mt-4">
                   <div class="white-text-sanserif">Soft Skills<br></div>
                   <div class=" dull-text">
                     User Interviews<br>
@@ -450,15 +511,15 @@ line-height: normal;
     </div>
 
     <!-- ACHIVEMENTS -->
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col orange-text-serif">Achivements</div>
+    <div class=" mt-5">
+      <div class="row mx-3">
+        <div class="col orange-text-serif md:px-28 md:mt-10 mt-5">Achievements</div>
       </div>
-      <div class="row mt-5">
+      <div class="row mt-3 pt-0 mx-5">
         <div class="col">
           <div class="container">
             <div class="row">
-              <div class="col-1"><img src="./images/BACK SIGN.png" alt="" class="img-fluid"></div>
+              <div class="col-1"><img src="./images/BACK SIGN.png" alt="" class="img-fluid  w-20 h-20"></div>
               <div class="col-11">
                 <div class="container">
                   <div class="row white-text-sanserif">Among Top 5 in “Adobe Designathon” 2023 organized at Tryst'23 by
@@ -478,11 +539,33 @@ line-height: normal;
     </div>
 
     <!-- FOOTER -->
-    <div>
-      <p class="dull-text fs-5 mt-5" style="text-align: center;">
-        Atharva Duraphe 2023 All Rights Reserved
-      </p>
-    </div>
+    <section class="mt-36 footer py-10 md:py-16 md:hidden block" style="background: #FFE4CC;">
+            <!-- FOOTER -->
+          
+            <div class="flex justify-center items-center align-center pl-10">
+                <a href="https://www.linkedin.com/in/atharva-duraphe-961b921b1/">
+                    <img src="./images/linkedin-footer.png" class="h-50 w-50"/>
+                </a>
+                <a href="https://www.behance.net/atharvadur6d52">
+                    <img src="./images/behance-footer.png" class="h-50 w-50"/>
+                </a>
+                <a href="https://www.instagram.com/atharva_duraphe_10//">
+                    <img src="./images/insta-footer.png" class="h-50 w-50"/>
+                </a>
+
+            </div>
+            <div class="mt-2 md:mt-5">  
+                <p  style="text-align: center " >
+                   Atharva Duraphe 2023 All Rights Reserved
+                </p>
+            </div>
+        </section>
+        </div>
+        <div class="mt-2 md:pt-20 md:block hidden">
+            <p  style="text-align: center;color: #FFE4CC">
+               Atharva Duraphe 2023 All Rights Reserved
+            </p>
+        </div>
     <!--FIXED ICONS RIGHT-->
     <div class="md:block hidden">
       <a href="https://www.linkedin.com/in/atharva-duraphe-961b921b1"><img src="./images/LINKEDIN.png" alt=""
@@ -499,6 +582,27 @@ line-height: normal;
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
+    <script>
+        document.getElementById('menu-button').addEventListener('click', function () {
+    if (window.innerWidth >= 768) {
+        // If screen width is 768px or larger (desktop), call w_menu()
+        w_menu();
+    } else {
+        // If screen width is less than 768px (mobile), toggle the mobile menu
+        var mobileMenu = document.querySelector('.mobile-menu');
+        mobileMenu.style.display = mobileMenu.style.display === 'none' ? 'block' : 'none';
+    }
+});
+
+    </script>
+    <script>
+        function closeMobileMenu() {
+    var mobileMenu = document.querySelector('.mobile-menu');
+    mobileMenu.style.display = 'none';
+    document.body.classList.remove("menu-open");
+}
+
+    </script>
 </body>
 
 </html>
