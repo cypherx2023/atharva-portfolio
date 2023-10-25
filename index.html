@@ -111,7 +111,11 @@ z-index: 0;
   animation: text2;
 }
 
-.text_1, .text_2 {
+.text_3 {
+  animation: text3;
+}
+
+.text_1, .text_2 ,.text_3{
   overflow: hidden;
   white-space: nowrap;
   display: inline-block;
@@ -127,16 +131,26 @@ font-weight: 700;
 line-height: normal;
 }
 
-.text_1::after, .text_2::after {
+.text_1::after, .text_2::after , .text_3::after{
   content: "";
   position: absolute;
   right: 0;
   animation: caret infinite;
   animation-duration: 1s;
-  animation-timing-function: steps(1, end);
+  animation-timing-function: steps(2, end);
 }
 
 @keyframes text2 {
+  0%, 50%, 100% {
+    width: 0;
+  }
+  
+  60%, 90% {
+    width: 4em;
+  }
+}
+
+@keyframes text3 {
   0%, 50%, 100% {
     width: 0;
   }
@@ -251,7 +265,7 @@ line-height: normal;
         text-align: left;
 
 }
-.text_1, .text_2 {
+.text_1, .text_2 ,.text_3{
     font-size: 4rem;
 }
 .back-sign-text {
@@ -534,6 +548,12 @@ body{
         }
     </style>
     <!-- MAIN DIV -->
+        <style>
+            .profile{
+                height: 400px;
+                width: 400px;
+            }
+        </style>
     <div id="w_main" style="display: block;" class="relative">
         <!-- TOP ICONS -->
         <div class="absolute top-0 right-0 left-0">
@@ -579,12 +599,15 @@ body{
             <div class="grid grid-cols-2 gap-2 p-3 items-center">
                 <!-- PHOTO 2 -->
                 <div class="md:col-span-1 col-span-2 md:px-24">
-                    <img src="./images/DSC_2352-2.png" alt="" class="bg-light img-fluid ">
+                    <img src="./images/DSC_2352-2.png" alt="" class="bg-light img-fluid  profile">
                 </div>
                 <!-- ABOUT ME -->
                 <div class="md:col-span-1 col-span-2  md:pr-24">
                     <h1><span class="text_1">Namskar...!</span>
                         <span class="text_2">Hello...!</span>
+                        <!-- <span class="text_3">Namaste...!</span> -->
+                        
+                         
                     </h1>
                         <p class="white-text-sanserif "
                            >
